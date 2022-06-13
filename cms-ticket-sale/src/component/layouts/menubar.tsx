@@ -1,8 +1,7 @@
 import React from 'react'
 import { BiHomeAlt } from 'react-icons/bi';
-import { TbTicket } from 'react-icons/tb'
+import { TbTicket, TbSettings } from 'react-icons/tb'
 import { RiFileList3Line } from 'react-icons/ri'
-import { IoSettingsOutline } from 'react-icons/io5'
 import { MdCopyright } from 'react-icons/md'
 import logo from './logo.svg'
 type idbtn = {
@@ -13,34 +12,45 @@ export const Menubar = (id: idbtn) => {
     const changebutton = (id: string) => {
         const btn: any = document.getElementById(id);
         btn.classList.toggle("button-active");
+        if (id === 'cd') {
+            const gdv: any = document.getElementById('gdv')
+            gdv.style.fontWeight = '700'
+
+        }
     }
     return (
         <div className='menubar' onLoad={() => changebutton(idbtn)}>
             <img src={logo} alt="logo" className='menubar-img' />
             <div className="menubar-optionbox">
-                <a href="/#" className='notline'>
-                    <div className="menubar-btnoption" id='tc'>
+
+                <div className="menubar-btnoption" id='tc'>
+                    <a href="/#" >
                         <p className="menubar-btnoption-icon"><BiHomeAlt /></p>
                         <p className="menubar-btnoption-p">Trang chủ</p>
-                    </div>
-                </a>
-                <a href="/#" className='notline'>
-                    <div className="menubar-btnoption" id='qlv'>
+                    </a>
+                </div>
+
+
+                <div className="menubar-btnoption" id='qlv'>
+                    <a href="/#" className='notline'>
                         <p className="menubar-btnoption-icon"><TbTicket /></p>
                         <p className="menubar-btnoption-p">Quản lý vé</p>
-                    </div>
-                </a>
-                <a href="/#" className='notline'>
-                    <div className="menubar-btnoption" id='dsv'>
+                    </a>
+                </div>
+
+
+                <div className="menubar-btnoption" id='dsv'>
+                    <a href="/#" className='notline'>
                         <p className="menubar-btnoption-icon"><RiFileList3Line /></p>
                         <p className="menubar-btnoption-p">Đối soát vé</p>
-                    </div>
-                </a>
-                <div className="menubar-btnoption" id='cd'>
-                    <p className="menubar-btnoption-icon"><IoSettingsOutline /></p>
+                    </a>
+                </div>
+
+                <div className="menubar-btnoption-setting" id='cd'>
+                    <p className="menubar-btnoption-icon"><TbSettings /></p>
                     <p className="menubar-btnoption-p">Cài đặt</p>
                 </div>
-                <a href="/#" className='notline'><div className="menubar-btn-setting"> Gói dịch vụ</div></a>
+                <a href="/#" className='notline'><div className="menubar-btn-setting" ><p id='gdv'> Gói dịch vụ</p></div></a>
             </div>
             <div className="menubar-copyright ">
                 <p>Copyright</p>
