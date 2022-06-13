@@ -24,7 +24,7 @@ export const Menubar = (id: idbtn) => {
             <div className="menubar-optionbox">
 
                 <div className="menubar-btnoption" id='tc'>
-                    <a href="/#" >
+                    <a href="/Home" >
                         <p className="menubar-btnoption-icon"><BiHomeAlt /></p>
                         <p className="menubar-btnoption-p">Trang chủ</p>
                     </a>
@@ -32,7 +32,7 @@ export const Menubar = (id: idbtn) => {
 
 
                 <div className="menubar-btnoption" id='qlv'>
-                    <a href="/#" className='notline'>
+                    <a href="/TicketManager" className='notline'>
                         <p className="menubar-btnoption-icon"><TbTicket /></p>
                         <p className="menubar-btnoption-p">Quản lý vé</p>
                     </a>
@@ -40,7 +40,7 @@ export const Menubar = (id: idbtn) => {
 
 
                 <div className="menubar-btnoption" id='dsv'>
-                    <a href="/#" className='notline'>
+                    <a href="/TicketChange" className='notline'>
                         <p className="menubar-btnoption-icon"><RiFileList3Line /></p>
                         <p className="menubar-btnoption-p">Đối soát vé</p>
                     </a>
@@ -50,7 +50,7 @@ export const Menubar = (id: idbtn) => {
                     <p className="menubar-btnoption-icon"><TbSettings /></p>
                     <p className="menubar-btnoption-p">Cài đặt</p>
                 </div>
-                <a href="/#" className='notline'><div className="menubar-btn-setting" ><p id='gdv'> Gói dịch vụ</p></div></a>
+                <a href="/ServicePack" className='notline'><div className="menubar-btn-setting" ><p id='gdv'> Gói dịch vụ</p></div></a>
             </div>
             <div className="menubar-copyright ">
                 <p>Copyright</p>
