@@ -81,20 +81,19 @@
 }
 
 .menubar-btnoption-icon {
-  opacity: 0.6;
   display: flex;
   margin: auto;
   flex: 1;
   font-size: 20px;
   color: #1E0D03;
   margin-left: 12px;
+  opacity: 0.6;
 }
 
 .menubar-btnoption-p {
   display: flex;
   margin: auto;
   flex: 6;
-
   color: #1E0D03;
   font-style: normal;
   font-weight: 500;
