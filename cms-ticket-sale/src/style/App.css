@@ -115,3 +115,21 @@
   line-height: 22px;
   opacity: 0.5;
 }
+
+.button-active {
+  background: #FFB800;
+}
+
+.button-active .menubar-btnoption-p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.button-active .menubar-btnoption-icon {
+  color: #FFFFFF;
+  opacity: 1;
+}
