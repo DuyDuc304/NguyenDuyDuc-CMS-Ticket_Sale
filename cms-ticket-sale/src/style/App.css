@@ -12,6 +12,10 @@
   font-family: 'Montserrat';
 }
 
+button {
+  cursor: pointer;
+}
+
 .bg {
   display: flex;
   margin: auto;
@@ -603,7 +607,13 @@ a {
   gap: 10px;
 }
 
-.dsgv-row-button p {
+.dsv-cds-btn {
+  position: absolute;
+  right: 24px;
+  top: 110px;
+}
+
+.add-ServicePack-btn p {
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
