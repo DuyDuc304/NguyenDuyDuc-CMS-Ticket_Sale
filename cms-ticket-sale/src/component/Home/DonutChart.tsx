@@ -29,23 +29,18 @@ export function DonutChart() {
                     '#FF8A48',
                     '#4F75FF',
                 ],
+
             },
         ],
     };
-    const options = {
 
+    const options = {
         plugins: {
             legend: {
-                display: false,
-                labels: {
-                    boxWidth: 0
-                }
-
-            }
-
+                display: false
+            },
         },
-
-    }
+    };
     return (
         <div>
             {/* lịch tuần hoặc ngày donut chart*/}

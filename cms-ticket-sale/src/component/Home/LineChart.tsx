@@ -34,6 +34,7 @@ export function LineChart() {
                 backgroundColor: 'rgba(250, 160, 95, 0.15)',
                 tension: 0.7,
                 borderColor: " #FF993C",
+
             },
         ],
     };
