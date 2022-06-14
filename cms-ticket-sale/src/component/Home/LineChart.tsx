@@ -11,6 +11,7 @@ import {
     Tooltip,
     Legend,
 } from 'chart.js';
+import { FiCalendar } from 'react-icons/fi';
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -20,6 +21,7 @@ ChartJS.register(
     Tooltip,
     Legend
 );
+const date = new Date();
 export function LineChart() {
 
     const data = {
@@ -27,10 +29,10 @@ export function LineChart() {
         datasets: [
             {
 
-                data: [260000000, 260000000, 280000000, 220000000, 218000000, 198000000, 208000000],
+                data: [193090000, 207990000, 220000000, 248000000, 198000000, 208000000, 240000000],
                 fill: true,
                 backgroundColor: 'rgba(250, 160, 95, 0.15)',
-                tension: 0.6,
+                tension: 0.7,
                 borderColor: " #FF993C",
             },
         ],
@@ -51,8 +53,27 @@ export function LineChart() {
 
     }
     return (
+        <div>
 
-        <Line data={data} options={options} />
+            <p className='home-p-doanhthu'> Doanh thu</p>
+            {/* lịch tuần hoặc ngày Line chart*/}
+            <div className="home-calenda-div" style={{ marginLeft: '1320px', marginTop: '80px' }}>
+                <p className='calenda-date'> Tháng {date.getMonth()}, {date.getFullYear()}</p>
+                <p className='calenda-icon'><FiCalendar /></p>
+            </div>
+            {/* line Char */}
+            <div className="home-line-chart" >
+                <Line data={data} options={options} />
+            </div>
+            {/* tổng doanh thu*/}
+            <label className="home-label-doanhthu">tổng doanh thu theo tuần</label>
+            <div className="home-row-doanhthu">
+                <label className="home-money-doanhthu">525.145.000</label>
+                <label className="home-dong-doanhthu">đồng</label>
+            </div>
+        </div>
+
+
 
 
 

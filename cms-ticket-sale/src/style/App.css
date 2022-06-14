@@ -238,6 +238,20 @@
   display: flex;
 }
 
+.home-p-doanhthu {
+  left: 24px;
+  top: 85px;
+  position: absolute;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #1E0D03;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
 .home-dong-doanhthu {
   margin-left: 5px;
   font-style: normal;
@@ -373,4 +387,46 @@
   display: flex;
   width: 246px;
   height: 246px;
+}
+
+.sreach {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  width: 470px;
+  height: 48px;
+  left: 321px;
+  top: 17px;
+  background: #EDEDED;
+
+  border-radius: 12px;
+}
+
+.sreach input {
+  border: none;
+  outline: none;
+  background: unset;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  display: flex;
+  padding-left: 12px;
+  align-items: center;
+  color: #1E0D03;
+  opacity: 1;
+  height: 46px;
+  width: 400px;
+}
+
+.sreach button {
+  display: flex;
+  bottom: 10px;
+  right: 12px;
+  position: absolute;
+  border: none;
+  background: unset;
+  color: #1E0D03;
+  font-size: 26px;
 }
