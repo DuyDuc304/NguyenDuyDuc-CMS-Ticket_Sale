@@ -286,7 +286,7 @@
   background: #FFFFFF;
   border: 1px solid #E6E0E0;
   border-radius: 4px;
-
+  cursor: pointer;
 }
 
 .calenda-date {
@@ -453,6 +453,7 @@
 }
 
 .qlv-filter {
+  cursor: pointer;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -507,18 +508,43 @@ a {
   top: 876px;
 }
 
-.next-page {
+.dsv-nextpage {
+  position: absolute;
+  left: 433px;
+  top: 866px;
+}
 
+.bgapp-dsv1 {
+  position: absolute;
+  width: 1097px;
+  height: 963px;
+  left: 321px;
+  top: 85px;
+  background: #FFFFFF;
+  border-radius: 24px;
+}
+
+.bgapp-dsv2 {
+  position: absolute;
+  width: 446px;
+  height: 963px;
+  left: 1442px;
+  top: 85px;
+  background: #FFFFFF;
+  border-radius: 24px;
+}
+
+.next-page {
   display: flex;
   flex-direction: row;
   gap: 5px;
   width: auto;
   height: 20px;
-
   margin: auto;
 }
 
 .page-number {
+  cursor: pointer;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -536,7 +562,9 @@ a {
 }
 
 .page-number-arow {
+  cursor: pointer;
   display: flex;
+
   margin-top: 2px;
   color: #A5A8B1;
   font-size: 16px;
@@ -549,5 +577,48 @@ a {
 }
 
 .page-number-arow :active {
+  color: #FF993C;
+  border: #FF993C;
+}
+
+.add-ServicePack-btn {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 164px;
+  height: 48px;
+  background: #FF993C;
+  border-radius: 8px;
+}
+
+.dsgv-row-button {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 1163px;
+  top: 120px;
+  gap: 10px;
+}
+
+.dsgv-row-button p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+.dsgv-row-button a {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
   color: #FF993C;
 }
