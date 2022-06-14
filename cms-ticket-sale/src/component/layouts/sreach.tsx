@@ -5,7 +5,7 @@ const Sreach = () => {
     return (
         <div className='sreach'>
             <form autoComplete='off' >
-                <input className="sreach-input" name='tìm kiếm' type="text" placeholder='search' />
+                <input className="sreach-input" name='tìm kiếm' type="text" placeholder='Search' />
                 <button className="sreach-button"><BiSearch /></button>
             </form>
         </div>

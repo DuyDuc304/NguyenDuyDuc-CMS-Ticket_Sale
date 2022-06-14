@@ -4,7 +4,8 @@ import { Menubar } from "../layouts/menubar";
 import Nextpage from "../layouts/nextpage";
 import Sreach from "../layouts/sreach";
 import Topbar from "../layouts/topbar";
-
+import TableTicketChange from "./TableTicketChange";
+import './TableTicketChange.css'
 class TicketChange extends React.Component {
     render() {
         return (
@@ -26,7 +27,7 @@ class TicketChange extends React.Component {
                         </div>
                     </div>
 
-
+                    <TableTicketChange />
 
                     <div className="dsv-nextpage"><Nextpage /></div>
                 </div>

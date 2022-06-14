@@ -3,6 +3,7 @@ import { BiSearch } from "react-icons/bi";
 import { Menubar } from "../layouts/menubar";
 import Nextpage from "../layouts/nextpage";
 import Topbar from "../layouts/topbar";
+import TableSevicePack from "./TableSevicePack";
 
 class ServicePack extends React.Component {
     render() {
@@ -24,10 +25,9 @@ class ServicePack extends React.Component {
                         <div className="add-ServicePack-btn">
                             <p >Thêm gói vé</p>
                         </div>
-
                     </div>
 
-
+                    <TableSevicePack />
 
                     <div className="qlv-nextpage">
                         <Nextpage />
