@@ -191,7 +191,7 @@
 
 .titleapp {
   position: absolute;
-  width: 178px;
+  width: auto;
   height: 54px;
   left: 24px;
   top: 24px;

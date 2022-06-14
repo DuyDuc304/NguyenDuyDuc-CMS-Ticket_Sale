@@ -8,7 +8,9 @@ class TicketManager extends React.Component {
             <div className='bg'>
                 <Topbar />
                 <Menubar buttonid='qlv' />
-                <div className="bgapp"></div>
+                <div className="bgapp">
+                    <label className="titleapp"> Danh sách vé</label>
+                </div>
             </div>
         )
     }

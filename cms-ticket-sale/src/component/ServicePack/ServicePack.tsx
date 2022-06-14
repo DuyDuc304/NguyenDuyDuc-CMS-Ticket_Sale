@@ -8,7 +8,9 @@ class ServicePack extends React.Component {
             <div className='bg'>
                 <Topbar />
                 <Menubar buttonid='cd' />
-                <div className="bgapp"></div>
+                <div className="bgapp">
+                    <label className="titleapp"> Danh sách gói vé</label>
+                </div>
             </div>
         )
     }
