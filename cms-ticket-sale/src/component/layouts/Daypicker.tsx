@@ -1,8 +1,9 @@
+
 import React from "react";
 import { FiCalendar } from "react-icons/fi";
 import DatePicker from "sassy-datepicker";
 
-export function Daypicker() {
+export const Daypicker = () => {
     const ChangeChart = (id: string) => {
         const checkngay: any = document.getElementById('checkngay')
         const checktuan: any = document.getElementById('checktuan')
@@ -17,22 +18,24 @@ export function Daypicker() {
 
     };
     const ShowCalenda = () => {
-        const calen: any = document.getElementById('cale')
+        const calen: any = document.getElementById('calen')
         if (calen.style.display === 'none') {
             calen.style.display = 'flex'
             const checktngay: any = document.getElementById('checkngay')
             checktngay.checked = true;
+
         } else {
             calen.style.display = 'none'
+
         }
     }
     return (
         <div className="col-daypicker">
             <div className="home-calenda-div" onClick={() => ShowCalenda()}>
-                <p className='calenda-date'> {date.toLocaleDateString()}</p>
+                <p className='calenda-date' id="datechange"> {date.toLocaleDateString()}</p>
                 <p className='calenda-icon' ><FiCalendar /></p>
             </div>
-            <div className='home-calenda-popup' id='cale' style={{ marginTop: '45px' }} >
+            <div className='home-calenda-popup' id='calen' style={{ marginTop: '45px' }} >
                 <p >{date.toLocaleDateString()}</p>
                 <div className='row-check-div'>
                     <div className="row">
@@ -48,7 +51,7 @@ export function Daypicker() {
                         <p>Theo tuần</p>
                     </div>
                 </div>
-                <DatePicker selected={date} style={{ marginLeft: '-10px', width: '370px', height: '369px' }} onClick={() => ShowCalenda()} onChange={handleDateSelect} />
+                <DatePicker selected={date} style={{ marginLeft: '-10px', width: '370px', height: '369px' }} onChange={handleDateSelect} />
             </div>
         </div>
     )

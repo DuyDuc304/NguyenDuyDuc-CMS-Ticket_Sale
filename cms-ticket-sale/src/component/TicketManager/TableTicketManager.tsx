@@ -11,35 +11,18 @@ class TableTicketManager extends React.Component {
         }
 
     }
+    TurnOnUseTicket() {
+        const xn: any = document.getElementById('bls-xn')
+        xn.style.display = 'flex'
+    }
     Showchangedate() {
-        const bls: any = document.getElementById('bls')
-        if (bls.style.display === 'none') {
-            bls.style.display = 'flex'
-        } else {
-            bls.style.display = 'none'
-        }
+        const bls: any = document.getElementById('bls-dnsdv')
+
+        bls.style.display = 'flex'
+        console.log('hiện')
 
     }
-    useticket() {
-        const col5: any = document.getElementById('col5')
-        const sdv: any = document.getElementById('sdv')
-        const csd: any = document.getElementById('csd')
-        const chose: any = document.getElementById('chosebox')
-        col5.removeChild(csd)
-        const div: any = document.createElement('div')
-        const label: any = document.createElement('label')
-        const p: any = document.createElement('p')
-        div.className = 'box-tt-dsd'
-        p.innerText = 'Đã sử dụng'
-        label.innerText = '•'
-        div.appendChild(p)
-        div.appendChild(label)
-        col5.appendChild(div)
-        chose.style.display = 'none'
-        sdv.style.pointerEvents = ' none'
 
-
-    }
     render() {
         return (
             <div className="table-ticket-mangager">
@@ -81,7 +64,7 @@ class TableTicketManager extends React.Component {
                             <p>Chưa sử dụng</p>
                         </div>
                     </div>
-                    <div className="tkm-col6"><p>14/04/2021</p> </div>
+                    <div className="tkm-col6" id="nsd"><p>14/04/2021</p> </div>
                     <div className="tkm-col7"><p></p>  </div>
                     <div className="tkm-col8"><p>-</p></div>
                     <div className="tkm-col9">
@@ -92,7 +75,7 @@ class TableTicketManager extends React.Component {
                         </div>
                         <div className="row-box-chose " id="chosebox">
                             <div className="tkm-chose">
-                                <div className="item-chose" onClick={() => this.useticket()} id='sdv'><p>Sử dụng vé</p></div>
+                                <div className="item-chose" onClick={() => this.TurnOnUseTicket()} id='sdv'><p>Sử dụng vé</p></div>
                                 <div className="item-chose" onClick={() => this.Showchangedate()}><p>Đổi ngày sử dụng</p></div>
                             </div>
                             <div className="nhon"></div>

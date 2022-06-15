@@ -349,7 +349,7 @@
 
 }
 
-.table-change-ticket-date {
+.change-ticket-date {
     position: absolute;
     width: 758px;
     height: 365px;
@@ -359,7 +359,7 @@
     border-radius: 10px;
 }
 
-.table-change-ticket-date-title {
+.change-ticket-date-title {
     position: absolute;
     width: 259px;
     height: 30px;
@@ -374,7 +374,7 @@
     color: #1E0D03;
 }
 
-.table-change-ticket-date-col {
+.change-ticket-date-col {
     top: 81px;
     position: absolute;
     display: flex;
@@ -383,12 +383,12 @@
     gap: 24px;
 }
 
-.table-change-ticket-date-row {
+.change-ticket-date-row {
     display: flex;
     flex-direction: row;
 }
 
-.table-change-ticket-date-row-p {
+.change-ticket-date-row-p {
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -399,7 +399,7 @@
     opacity: 0.7;
 }
 
-.table-change-ticket-date-row label {
+.change-ticket-date-row label {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -411,7 +411,7 @@
     opacity: 0.7;
 }
 
-.table-change-ticket-date-row-button {
+.change-ticket-date-row-button {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -424,7 +424,7 @@
     bottom: 32px;
 }
 
-.table-change-ticket-date-button-huy {
+.change-ticket-date-button-huy {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -448,7 +448,7 @@
     color: #FF993C;
 }
 
-.table-change-ticket-date-button-luu {
+.change-ticket-date-button-luu {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -470,4 +470,107 @@
     display: flex;
     align-items: center;
     color: #FFFFFF;
+}
+
+.use-ticket {
+    position: absolute;
+    width: 758px;
+    height: 200px;
+    left: 581px;
+    top: 357px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.fillter-ticket {
+    position: absolute;
+    left: 643px;
+    top: 357px;
+    width: 634px;
+    height: 454px;
+    background: #FFFFFF;
+    border-radius: 16px;
+}
+
+.fillter-ticket-btn {
+    box-sizing: border-box;
+    position: absolute;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 24px;
+    gap: 10px;
+    width: 160px;
+    height: 48px;
+    border: 1px solid #FF993C;
+    border-radius: 8px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: #FF993C;
+    left: 224px;
+    bottom: 23px;
+}
+
+.fillter-ticket-col {
+    top: 81px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-left: 32px;
+    gap: 10px;
+}
+
+.item-col-fillter-ticket {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-date-row-fillter-ticket {
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+}
+
+.item-checkbox-row-fillter-ticket {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    gap: 40px;
+}
+
+.item-checkbox-fillter-ticket {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.item-date-row-fillter-ticket-p {
+    display: flex;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    align-items: center;
+    color: #1E0D03;
+}
+
+.item-checkbox-door-row-fillter-ticket {
+    display: flex;
+    flex-direction: row;
+    gap: 106px
+}
+
+.item-checkbox-door1-row-fillter-ticket {
+    display: flex;
+    flex-direction: row;
+    gap: 99px
 }

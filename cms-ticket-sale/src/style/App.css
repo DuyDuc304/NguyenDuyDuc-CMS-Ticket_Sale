@@ -635,7 +635,7 @@ a {
   height: 1.3em;
   border: 1px solid #27AEF9;
   border-radius: 50%;
-
+  margin-right: 5px;
 }
 
 .checkbox-round input {
@@ -651,6 +651,8 @@ a {
   display: flex;
   margin: auto;
 }
+
+
 
 .checkbox-round input:checked {
   margin: auto;
@@ -693,4 +695,60 @@ a {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.CheckBoxSquare {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.CheckBoxSquare input {
+  position: absolute;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  border: 2px solid#A5A8B1;
+  border-radius: 4px;
+}
+
+.CheckBoxSquare input:checked~.checkmark {
+  background-color: #27AEF9;
+  border: 2px solid#27AEF9;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.CheckBoxSquare input:checked~.checkmark:after {
+  display: block;
+}
+
+.CheckBoxSquare .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
