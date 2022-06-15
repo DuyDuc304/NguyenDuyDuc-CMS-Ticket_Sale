@@ -6,6 +6,8 @@ import Topbar from '../layouts/topbar';
 import { DonutChart } from './DonutChart';
 import { LineChart } from './LineChart';
 
+
+
 class Home extends React.Component {
 
   render() {

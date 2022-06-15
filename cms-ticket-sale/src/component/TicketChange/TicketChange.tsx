@@ -32,7 +32,7 @@ class TicketChange extends React.Component {
                     <div className="dsv-nextpage"><Nextpage /></div>
                 </div>
                 <div className="bgapp-dsv2">
-
+                    <label className="titleapp"> Lọc vé</label>
 
                 </div>
             </div>

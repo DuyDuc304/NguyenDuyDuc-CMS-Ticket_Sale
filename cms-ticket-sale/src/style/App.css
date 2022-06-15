@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+
 * {
   margin: 0px;
   padding: 0px;
@@ -626,4 +627,53 @@ a {
   display: flex;
   align-items: center;
   color: #FF993C;
+}
+
+.checkbox-round {
+  display: flex;
+  width: 1.3em;
+  height: 1.3em;
+  border: 1px solid #27AEF9;
+  border-radius: 50%;
+
+}
+
+.checkbox-round input {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  margin: auto;
+}
+
+.checkbox-round input:checked {
+  margin: auto;
+  display: flex;
+  background-color: #27AEF9;
+}
+
+.home-calenda-popup {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 32px;
+  gap: 16px;
+  position: absolute;
+  width: 370px;
+  height: 396px;
+  background: #FFFFFF;
+  box-shadow: 4px 4px 45px rgba(109, 46, 0, 0.35);
+  border-radius: 20px;
+}
+
+.row-check-div {
+  display: flex;
+  flex-direction: row;
+  gap: 140px;
 }
