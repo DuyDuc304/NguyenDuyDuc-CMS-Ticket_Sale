@@ -11,6 +11,15 @@ class TableTicketManager extends React.Component {
         }
 
     }
+    Showchangedate() {
+        const bls: any = document.getElementById('bls')
+        if (bls.style.display === 'none') {
+            bls.style.display = 'flex'
+        } else {
+            bls.style.display = 'none'
+        }
+
+    }
     useticket() {
         const col5: any = document.getElementById('col5')
         const sdv: any = document.getElementById('sdv')
@@ -84,7 +93,7 @@ class TableTicketManager extends React.Component {
                         <div className="row-box-chose " id="chosebox">
                             <div className="tkm-chose">
                                 <div className="item-chose" onClick={() => this.useticket()} id='sdv'><p>Sử dụng vé</p></div>
-                                <div className="item-chose"><p>Đổi ngày sử dụng</p></div>
+                                <div className="item-chose" onClick={() => this.Showchangedate()}><p>Đổi ngày sử dụng</p></div>
                             </div>
                             <div className="nhon"></div>
                         </div>
@@ -209,9 +218,9 @@ class TableTicketManager extends React.Component {
                     <div className="tkm-col3"> <p>123456789034</p></div>
                     <div className="tkm-col4"> <p>Hội chợ triển lãm tiêu dùng 2021</p></div>
                     <div className="tkm-col5">
-                        <div className="box-tt-csd ">
+                        <div className="box-tt-dsd ">
                             <label >•</label>
-                            <p>Chưa sử dụng</p>
+                            <p>Đã sử dụng</p>
                         </div>
                     </div>
                     <div className="tkm-col6"><p>14/04/2021</p> </div>
@@ -251,6 +260,7 @@ class TableTicketManager extends React.Component {
                     <div className="tkm-col8"><p>Cổng 1</p></div>
                     <div className="tkm-col9"></div>
                 </div>
+
             </div>
         )
     }

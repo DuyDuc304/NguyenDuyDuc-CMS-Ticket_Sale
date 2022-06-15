@@ -346,5 +346,128 @@
     border-left: 8px solid #FFD2A8;
     border-top: 7px solid transparent;
     border-bottom: 7px solid transparent;
-    /* border-right: 8px solid transparent; */
+
+}
+
+.table-change-ticket-date {
+    position: absolute;
+    width: 758px;
+    height: 365px;
+    left: 581px;
+    top: 357px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.table-change-ticket-date-title {
+    position: absolute;
+    width: 259px;
+    height: 30px;
+    left: 250px;
+    top: 24px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    color: #1E0D03;
+}
+
+.table-change-ticket-date-col {
+    top: 81px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-left: 32px;
+    gap: 24px;
+}
+
+.table-change-ticket-date-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.table-change-ticket-date-row-p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+
+    display: flex;
+    align-items: center;
+    color: #1E0D03;
+    opacity: 0.7;
+}
+
+.table-change-ticket-date-row label {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    position: absolute;
+    margin-left: 185px;
+    width: 432px;
+    align-items: center;
+    color: #1E0D03;
+    opacity: 0.7;
+}
+
+.table-change-ticket-date-row-button {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    position: absolute;
+    width: 344px;
+    height: 48px;
+    left: 207px;
+    bottom: 32px;
+}
+
+.table-change-ticket-date-button-huy {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 24px;
+    gap: 10px;
+    width: 160px;
+    height: 48px;
+    border: 1px solid #FF993C;
+    background-color: transparent;
+    border-radius: 8px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #FF993C;
+}
+
+.table-change-ticket-date-button-luu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 24px;
+    gap: 10px;
+    width: 160px;
+    height: 48px;
+    background: #FF993C;
+    border-radius: 8px;
+    border: #FF993C;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
 }
