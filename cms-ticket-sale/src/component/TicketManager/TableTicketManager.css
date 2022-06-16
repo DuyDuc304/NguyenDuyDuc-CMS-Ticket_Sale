@@ -6,6 +6,11 @@
     height: 624px;
 }
 
+.row1-p {
+    font-weight: 600;
+    font-size: 16px;
+}
+
 .row1 {
     display: flex;
     width: 1511px;
@@ -34,11 +39,9 @@
     margin: auto;
     width: 116px;
     height: 48px;
-    left: 45px;
-    top: 11px;
     font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 14px;
     line-height: 26px;
     display: flex;
     align-items: center;
@@ -53,11 +56,9 @@
 .tkm-col2 {
     width: 155px;
     height: 48px;
-    left: 45px;
-    top: 11px;
     font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 14px;
     line-height: 26px;
     display: flex;
     align-items: center;
@@ -65,14 +66,11 @@
 }
 
 .tkm-col3 {
-
     width: 159px;
     height: 48px;
-    left: 45px;
-    top: 11px;
     font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 14px;
     line-height: 26px;
     display: flex;
     align-items: center;
@@ -83,11 +81,9 @@
 
     width: 281px;
     height: 48px;
-    left: 45px;
-    top: 11px;
     font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 14px;
     line-height: 26px;
     display: flex;
     align-items: center;
@@ -98,11 +94,9 @@
 
     width: 209px;
     height: 48px;
-    left: 45px;
-    top: 11px;
     font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 14px;
     line-height: 26px;
     display: flex;
     align-items: center;
@@ -113,11 +107,9 @@
 
     width: 166px;
     height: 48px;
-    left: 45px;
-    top: 11px;
     font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 14px;
     line-height: 26px;
     display: flex;
     align-items: center;
@@ -125,14 +117,11 @@
 }
 
 .tkm-col7 {
-
     width: 156px;
     height: 48px;
-    left: 45px;
-    top: 11px;
     font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 14px;
     line-height: 26px;
     display: flex;
     align-items: center;
@@ -143,11 +132,9 @@
 
     width: 129px;
     height: 48px;
-    left: 45px;
-    top: 11px;
     font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 14px;
     line-height: 26px;
     display: flex;
     align-items: center;
@@ -155,11 +142,8 @@
 }
 
 .tkm-col9 {
-
     width: 140px;
     height: 48px;
-    left: 45px;
-    top: 11px;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -236,7 +220,6 @@
     position: absolute;
     width: auto;
     height: 31px;
-
     background: #DEF7E0;
     border: 1px solid #03AC00;
     border-radius: 4px;

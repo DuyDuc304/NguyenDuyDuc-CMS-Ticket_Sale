@@ -3,6 +3,251 @@
     width: 1516px;
     height: 160px;
     left: 24px;
-    top: 182px;
-    background-color: #FF993C;
+    top: 192px;
+}
+
+.table-sivice-park-row1 {
+    display: flex;
+    width: 1516px;
+    height: 52px;
+    background: #F1F4F8;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.table-sivice-park-row2 {
+    display: flex;
+    width: 1516px;
+    height: 52px;
+    background: #FFFFFF;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.table-sivice-park-col1 {
+    display: flex;
+    margin: auto;
+    width: 123px;
+    height: 48px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #1E0D03;
+}
+
+.table-sivice-park-col1 p {
+    margin: auto;
+}
+
+.table-sivice-park-col2 {
+    width: 149px;
+    height: 48px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #1E0D03
+}
+
+.table-sivice-park-col3 {
+    width: 147px;
+    height: 48px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #1E0D03
+}
+
+.colum-date-time {
+    width: 110px;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+}
+
+.number-money-ticket {
+    width: 130px;
+    text-align: end;
+
+}
+
+.table-sivice-park-col4 {
+    width: 177px;
+    height: 48px;
+    display: flex;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: end;
+    align-items: center;
+    color: #1E0D03;
+}
+
+.table-sivice-park-col5 {
+    width: 166px;
+    height: 48px;
+    display: flex;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: end;
+    align-items: center;
+    color: #1E0D03;
+
+}
+
+.table-sivice-park-col6 {
+    width: 191px;
+    height: 48px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #1E0D03
+}
+
+.table-sivice-park-col7 {
+    width: 261px;
+    height: 48px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #1E0D03
+}
+
+.table-sivice-park-col8 {
+    width: 135px;
+    height: 48px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #1E0D03
+}
+
+.table-sivice-park-col9 {
+    width: 167px;
+    height: 48px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #FF993C;
+}
+
+.table-sivice-park-col9 p {
+    margin: auto;
+}
+
+.box-tt-dad {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 8px;
+    position: absolute;
+    width: auto;
+    height: 31px;
+    background: #DEF7E0;
+    border: 1px solid #03AC00;
+    border-radius: 4px;
+
+}
+
+.box-tt-dad p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    color: #03AC00;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.box-tt-dad label {
+    color: #03AC00;
+    ;
+    display: flex;
+    margin-bottom: 8px;
+    flex: 1;
+    font-size: 50px;
+}
+
+.box-tt-tat {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 8px;
+    position: absolute;
+    width: auto;
+    height: 31px;
+    background: #F8EBE8;
+    border: 1px solid #FD5959;
+    border-radius: 4px;
+
+}
+
+.box-tt-tat p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    color: #FD5959;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.box-tt-tat label {
+    color: #FD5959;
+    display: flex;
+    margin-bottom: 8px;
+    flex: 1;
+    font-size: 50px;
+}
+
+.icon-update {
+
+    font-size: 22px;
+    display: flex;
+    margin: auto;
+    padding-right: 4px;
+}
+
+.row-update {
+    cursor: pointer;
+    flex-direction: row;
+    display: flex;
+    margin: auto;
 }

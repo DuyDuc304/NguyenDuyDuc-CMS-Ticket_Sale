@@ -27,14 +27,14 @@ class TableTicketManager extends React.Component {
         return (
             <div className="table-ticket-mangager">
                 <div className="row1">
-                    <div className="tkm-col1"> <p>STT</p> </div>
-                    <div className="tkm-col2"> <p>Bokking code</p></div>
-                    <div className="tkm-col3"><p> Sô vé</p></div>
-                    <div className="tkm-col4"><p>Tên sự kiện</p> </div>
-                    <div className="tkm-col5"><p>Tình trạng sử dụng</p> </div>
-                    <div className="tkm-col6"><p>Ngày sử dụng</p></div>
-                    <div className="tkm-col7"><p>Ngày xuất vé</p></div>
-                    <div className="tkm-col8"> <p>Cổng check-in</p></div>
+                    <div className="tkm-col1"> <p className="row1-p">STT</p> </div>
+                    <div className="tkm-col2"> <p className="row1-p">Bokking code</p></div>
+                    <div className="tkm-col3"><p className="row1-p"> Sô vé</p></div>
+                    <div className="tkm-col4"><p className="row1-p">Tên sự kiện</p> </div>
+                    <div className="tkm-col5"><p className="row1-p">Tình trạng sử dụng</p> </div>
+                    <div className="tkm-col6"><p className="row1-p">Ngày sử dụng</p></div>
+                    <div className="tkm-col7"><p className="row1-p">Ngày xuất vé</p></div>
+                    <div className="tkm-col8"> <p className="row1-p">Cổng check-in</p></div>
                     <div className="tkm-col9"></div>
                 </div>
                 <div className="row2">
