@@ -13,6 +13,23 @@
   font-family: 'Montserrat';
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input {
+  color: #1E0D03 !important;
+  padding-left: 12px;
+}
+
+input:disabled {
+  color: #A5A8B1;
+  background-color: #E6E0E0;
+}
+
+
 button {
   cursor: pointer;
 }
@@ -751,4 +768,18 @@ a {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.ttbc {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  color: #1E0D03;
+  opacity: 0.4;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }

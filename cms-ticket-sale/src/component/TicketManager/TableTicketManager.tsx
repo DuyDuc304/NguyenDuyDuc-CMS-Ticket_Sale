@@ -19,7 +19,7 @@ class TableTicketManager extends React.Component {
         const bls: any = document.getElementById('bls-dnsdv')
 
         bls.style.display = 'flex'
-        console.log('hiện')
+
 
     }
 

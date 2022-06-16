@@ -109,8 +109,6 @@ export const TicketManager = () => {
         nsd.innerText = datechange.innerText
         chose.style.display = 'none'
         bls.style.display = 'none'
-
-        console.log('ẩn')
     }
     function checktc() {
         const checkdsd: any = document.getElementById('checkdsd')
@@ -140,12 +138,16 @@ export const TicketManager = () => {
         if (checkdtc.checked === true) {
             checkc1.checked = false
             checkc1.disabled = true
+
             checkc2.checked = false
             checkc2.disabled = true
+
             checkc3.checked = false
             checkc3.disabled = true
+
             checkc4.checked = false
             checkc4.disabled = true
+
             checkc5.checked = false
             checkc5.disabled = true
         } else {

@@ -1,7 +1,53 @@
 import React from "react"
 import './TableSevicePack.css'
 import { HiOutlinePencilAlt } from 'react-icons/hi'
+var time = new Date();
 class TableSevicePack extends React.Component {
+    ShowSevicePark(id: string) {
+        const add: any = document.getElementById(id)
+        if (add.style.display === 'none') {
+            add.style.display = 'flex'
+        } else {
+            add.style.display = 'none'
+        }
+        this.setdatetime()
+    }
+    CheckGiaVe1(id: string) {
+        const inputgd: any = document.getElementById('gvgd1')
+        const inputcb: any = document.getElementById('gvcb1')
+        const inputsv: any = document.getElementById('sove1')
+        const checkon: any = document.getElementById(id)
+        if (id === 'checkgd1') {
+            if (checkon.checked === true) {
+                inputgd.disabled = false
+            } else {
+                inputgd.disabled = true
+                inputgd.value = null
+            }
+        } else {
+            if (checkon.checked === true) {
+                inputcb.disabled = false
+                inputsv.disabled = false
+            } else {
+                inputcb.disabled = true
+                inputsv.disabled = true
+                inputsv.value = null
+                inputcb.value = null
+            }
+        }
+    }
+    setdatetime() {
+        const clock1: any = document.getElementById('clock1')
+        const clock2: any = document.getElementById('clock2')
+        const checkgd1: any = document.getElementById('checkgd1')
+        const gvgd1: any = document.getElementById('gvgd1')
+        clock1.value = time.getHours() + ':' + time.getMinutes()
+        clock2.value = time.getHours() + ':' + time.getMinutes()
+        checkgd1.checked = true
+        this.CheckGiaVe1('checkgd1')
+        gvgd1.value = 90000
+
+    }
     render() {
         return (
             <div className="table-sevice-park">
@@ -46,7 +92,7 @@ class TableSevicePack extends React.Component {
                         </div>
                     </div>
                     <div className="table-sivice-park-col9">
-                        <div className="row-update">
+                        <div className="row-update" onClick={() => this.ShowSevicePark('updatesvp')}>
                             <p className="icon-update" ><HiOutlinePencilAlt /></p>
                             <p >Cập nhật</p>
                         </div>
@@ -83,7 +129,7 @@ class TableSevicePack extends React.Component {
                         </div>
                     </div>
                     <div className="table-sivice-park-col9">
-                        <div className="row-update">
+                        <div className="row-update" onClick={() => this.ShowSevicePark('updatesvp')}>
                             <p className="icon-update" ><HiOutlinePencilAlt /></p>
                             <p >Cập nhật</p>
                         </div>

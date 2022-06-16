@@ -251,3 +251,321 @@
     display: flex;
     margin: auto;
 }
+
+.popup-sevice-park-div {
+    position: absolute;
+    width: 758px;
+    height: 628px;
+    top: 226px;
+    left: 581px;
+    background: #FFFFFF;
+    border-radius: 16px;
+}
+
+.add-sevice-park-title {
+    position: absolute;
+    width: 259px;
+    height: 30px;
+    left: 302px;
+    top: 24px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    color: #1E0D03;
+}
+
+.sevice-park-row-button {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    position: absolute;
+    width: 344px;
+    height: 48px;
+    left: 207px;
+    bottom: 32px;
+}
+
+.sevice-park-button-huy {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 24px;
+    gap: 10px;
+    width: 160px;
+    height: 48px;
+    border: 1px solid #FF993C;
+    background-color: transparent;
+    border-radius: 8px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #FF993C;
+}
+
+.sevice-park-button-luu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 24px;
+    gap: 10px;
+    width: 160px;
+    height: 48px;
+    background: #FF993C;
+    border-radius: 8px;
+    border: #FF993C;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.add-sevice-park-col-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 32px;
+    margin-top: 81px;
+    height: 440px;
+    width: 647px;
+}
+
+.add-sevice-park-conten-item {
+    width: auto;
+    height: 26px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #1E0D03
+}
+
+.sevice-park-row-conten {
+    display: flex;
+    flex-direction: row;
+    gap: 43px;
+}
+
+.input-name-sevice-park {
+
+    box-sizing: border-box;
+    width: 367px;
+    height: 40px;
+    border: 1px solid #A5A8B1;
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #A5A8B1;
+    opacity: 0.7;
+}
+
+.row-gia-ve {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.row-gia-ve p {
+    display: flex;
+    padding-top: 10px;
+}
+
+.input-number-monney-ticket {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 148px;
+    height: 40px;
+    background: #F1F4F8;
+    border: 1.5px solid #F1F4F8;
+    border-radius: 8px;
+}
+
+.input-number-ticket {
+    flex-direction: row;
+    align-items: flex-start;
+    width: 72px;
+    height: 40px;
+    background: #F1F4F8;
+    border: 1.5px solid #F1F4F8;
+    border-radius: 8px;
+}
+
+.check-box-money {
+    margin-top: 7px;
+}
+
+.row-tt-sevice-park {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: 176px;
+    height: 40px;
+    border: 1px solid #A5A8B1;
+    border-radius: 8px;
+    font-style: normal;
+    cursor: pointer;
+}
+
+.row-tt-sevice-park p {
+    margin-left: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #1E0D03
+}
+
+.row-tt-sevice-park label {
+    position: absolute;
+    margin-left: 150px;
+    display: flex;
+    font-size: 16px;
+    color: #FF993C;
+    cursor: pointer;
+}
+
+.date-time-picker-sevice-park {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    border: 1px solid #A5A8B1;
+    border-radius: 8px;
+    width: 142px;
+    height: 40px;
+}
+
+.date-time-picker-sevice-park-p {
+    margin-left: 12px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #1E0D03;
+    opacity: 0.7;
+}
+
+.colum-date-time-picker {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.row-date-time-picker {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.dropdownfeel {
+    top: 465px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 8px;
+    background-color: #F1F4F8;
+    width: 176px;
+    height: auto;
+}
+
+.dropdownfeel-item {
+    display: flex;
+    background-color: #F1F4F8;
+    border-radius: 8px;
+    border-radius: transparent;
+    width: 176px;
+    height: 40px;
+}
+
+.dropdownfeel-item p {
+    margin-top: 10px;
+    margin-left: 12px;
+}
+
+.dropdownfeel-item:hover {
+    background-color: #E0E0E0;
+}
+
+.update-sevice-park-title {
+    position: absolute;
+    width: auto;
+    height: 30px;
+    left: 211px;
+    top: 24px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    color: #1E0D03;
+}
+
+.input-msk-sevice-park {
+    box-sizing: border-box;
+    width: 245px;
+    height: 40px;
+    border: 1px solid #A5A8B1;
+    border-radius: 8px;
+}
+
+.input-time-sevive-park {
+    width: 120px;
+    height: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    padding: 0px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: #A5A8B1;
+    border: none;
+    outline: none;
+}
+
+
+.input-time-sevive-park::-webkit-calendar-picker-indicator {
+    filter: invert(0.5) sepia(20) saturate(15) hue-rotate(4deg);
+}
+
+#clock:before {
+    content: 'hh:mm:ss';
+    color: #9d9d9d;
+    position: absolute;
+    background: #fff;
+    width: 70px;
+}
+
+#clock:valid:before {
+    width: 0;
+    content: '';
+}

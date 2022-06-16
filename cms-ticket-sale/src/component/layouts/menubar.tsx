@@ -14,8 +14,9 @@ export const Menubar = (id: idbtn) => {
         btn.classList.toggle("button-active");
         if (id === 'cd') {
             const gdv: any = document.getElementById('gdv')
+            const btngdv: any = document.getElementById('btngdv')
             gdv.style.fontWeight = '700'
-
+            btngdv.style.pointerEvents = 'none'
         }
     }
     return (
@@ -45,7 +46,7 @@ export const Menubar = (id: idbtn) => {
                     <p className="menubar-btnoption-icon"><TbSettings /></p>
                     <p className="menubar-btnoption-p">Cài đặt</p>
                 </div>
-                <a href="/ServicePack" className='notline'><div className="menubar-btn-setting" ><p id='gdv'> Gói dịch vụ</p></div></a>
+                <a href="/ServicePack" className='notline' id='btngdv'><div className="menubar-btn-setting" ><p id='gdv'> Gói dịch vụ</p></div></a>
             </div>
             <div className="menubar-copyright ">
                 <p>Copyright</p>
