@@ -1,3 +1,4 @@
+
 import React from "react";
 import { BiSearch } from "react-icons/bi";
 import { FiCalendar } from "react-icons/fi";
@@ -11,6 +12,227 @@ import Topbar from "../layouts/topbar";
 import TableTicketManager from "./TableTicketManager";
 
 export const TicketManager = () => {
+    function DaSuDung() {
+        const allelm: any = document.getElementById("tbtm")
+        const allrow: any = allelm.children
+        for (let i = 0; i < allrow.length; i++) {
+            const allelmr: any = allrow[i].children
+            for (let j = 1; j < allelmr.length; j++) {
+                if (allelmr[j].className === "tkm-col5") {
+                    const p: any = allelmr[j].children
+                    for (let k = 0; k < p.length; k++) {
+                        if (p[k].className === "box-tt-dsd ") {
+                            allrow[i].style.display = 'flex'
+
+                        }
+
+                    }
+                }
+
+            }
+        }
+    }
+    function tatca() {
+        const allelm: any = document.getElementById("tbtm")
+        const allrow: any = allelm.children
+        for (let i = 0; i < allrow.length; i++) {
+            allrow[i].style.display = 'flex'
+        }
+
+    }
+    function allnull() {
+        const allelm: any = document.getElementById("tbtm")
+        const allrow: any = allelm.children
+        for (let i = 1; i < allrow.length; i++) {
+            allrow[i].style.display = 'none'
+        }
+
+    }
+    function HetHan() {
+        const allelm: any = document.getElementById("tbtm")
+        const allrow: any = allelm.children
+        for (let i = 0; i < allrow.length; i++) {
+            const allelmr: any = allrow[i].children
+            for (let j = 1; j < allelmr.length; j++) {
+                if (allelmr[j].className === "tkm-col5") {
+                    const p: any = allelmr[j].children
+                    for (let k = 0; k < p.length; k++) {
+                        if (p[k].className === "box-tt-hh ") {
+                            allrow[i].style.display = 'flex'
+
+                        }
+
+                    }
+                }
+
+            }
+        }
+    }
+    function Cong1() {
+        const allelm: any = document.getElementById("tbtm")
+        const allrow: any = allelm.children
+        for (let i = 0; i < allrow.length; i++) {
+            const allelmr: any = allrow[i].children
+            for (let j = 1; j < allelmr.length; j++) {
+                if (allelmr[j].className === "tkm-col8") {
+                    const p: any = allelmr[j].children
+                    for (let k = 0; k < p.length; k++) {
+                        if (p[k].innerText === "Cổng 1") {
+                            allrow[i].style.display = 'flex'
+
+                        }
+
+                    }
+                }
+
+            }
+        }
+    }
+    function Cong2() {
+        const allelm: any = document.getElementById("tbtm")
+        const allrow: any = allelm.children
+        for (let i = 0; i < allrow.length; i++) {
+            const allelmr: any = allrow[i].children
+            for (let j = 1; j < allelmr.length; j++) {
+                if (allelmr[j].className === "tkm-col8") {
+                    const p: any = allelmr[j].children
+                    for (let k = 0; k < p.length; k++) {
+                        if (p[k].innerText === "Cổng 2") {
+                            allrow[i].style.display = 'flex'
+
+                        }
+
+                    }
+                }
+
+            }
+        }
+    }
+    function Cong3() {
+        const allelm: any = document.getElementById("tbtm")
+        const allrow: any = allelm.children
+        for (let i = 0; i < allrow.length; i++) {
+            const allelmr: any = allrow[i].children
+            for (let j = 1; j < allelmr.length; j++) {
+                if (allelmr[j].className === "tkm-col8") {
+                    const p: any = allelmr[j].children
+                    for (let k = 0; k < p.length; k++) {
+                        if (p[k].innerText === "Cổng 3") {
+                            allrow[i].style.display = 'flex'
+
+                        }
+                        console.log(p[k])
+                    }
+                }
+
+            }
+        }
+    }
+    function Cong4() {
+        const allelm: any = document.getElementById("tbtm")
+        const allrow: any = allelm.children
+        for (let i = 0; i < allrow.length; i++) {
+            const allelmr: any = allrow[i].children
+            for (let j = 1; j < allelmr.length; j++) {
+                if (allelmr[j].className === "tkm-col8") {
+                    const p: any = allelmr[j].children
+                    for (let k = 0; k < p.length; k++) {
+                        if (p[k].innerText === "Cổng 4") {
+                            allrow[i].style.display = 'flex'
+
+                        }
+
+                    }
+                }
+
+            }
+        }
+    }
+    function Cong5() {
+        const allelm: any = document.getElementById("tbtm")
+        const allrow: any = allelm.children
+        for (let i = 0; i < allrow.length; i++) {
+            const allelmr: any = allrow[i].children
+            for (let j = 1; j < allelmr.length; j++) {
+                if (allelmr[j].className === "tkm-col8") {
+                    const p: any = allelmr[j].children
+                    for (let k = 0; k < p.length; k++) {
+                        if (p[k].innerText === "Cổng 5") {
+                            allrow[i].style.display = 'flex'
+
+                        }
+
+                    }
+                }
+
+            }
+        }
+    }
+    function ChuaSuDung() {
+        const allelm: any = document.getElementById("tbtm")
+        const allrow: any = allelm.children
+        for (let i = 0; i < allrow.length; i++) {
+            const allelmr: any = allrow[i].children
+            for (let j = 1; j < allelmr.length; j++) {
+                if (allelmr[j].className === "tkm-col5") {
+                    const p: any = allelmr[j].children
+                    for (let k = 0; k < p.length; k++) {
+                        if (p[k].className === "box-tt-csd ") {
+                            allrow[i].style.display = 'flex'
+
+                        }
+
+                    }
+                }
+
+            }
+        }
+    }
+    function Loc() {
+        const checkdtc: any = document.getElementById('checkdtc')
+        const checkc1: any = document.getElementById('checkdc1')
+        const checkc2: any = document.getElementById('checkdc2')
+        const checkc3: any = document.getElementById('checkdc3')
+        const checkc4: any = document.getElementById('checkdc4')
+        const checkc5: any = document.getElementById('checkdc5')
+        const checkdsd: any = document.getElementById('checkdsd')
+        const checkcsd: any = document.getElementById('checkcsd')
+        const checkhh: any = document.getElementById('checkhh')
+        const checktc: any = document.getElementById('checktc')
+        allnull()
+        if (checktc.checked === true) {
+            tatca()
+        }
+        if (checkdtc.checked === true) {
+            tatca()
+        }
+        if (checkcsd.checked === true) {
+            ChuaSuDung()
+        }
+        if (checkdsd.checked === true) {
+            DaSuDung()
+        }
+        if (checkhh.checked === true) {
+            HetHan()
+        }
+
+        if (checkc1.checked === true) {
+            Cong1()
+        }
+        if (checkc2.checked === true) {
+            Cong2()
+        }
+        if (checkc3.checked === true) {
+            Cong3()
+        }
+        if (checkc4.checked === true) {
+            Cong4()
+        }
+        if (checkc5.checked === true) {
+            Cong5()
+        }
+        ShowFillterTicket()
+    }
     const ChangeChart = (id: string) => {
         const checkngay: any = document.getElementById('checkngay1')
         const checktuan: any = document.getElementById('checktuan1')
@@ -84,9 +306,11 @@ export const TicketManager = () => {
         TurnOffUseTicket()
     }
     function ShowFillterTicket() {
+
         const lv: any = document.getElementById('bls-lv')
         if (lv.style.display === 'none') {
             lv.style.display = 'flex'
+
         } else {
             lv.style.display = 'none'
         }
@@ -223,7 +447,7 @@ export const TicketManager = () => {
             <div className="block-screen" id="bls-lv">
                 <div className="fillter-ticket">
                     <p className="change-ticket-date-title">Lọc vé</p>
-                    <button className="fillter-ticket-btn" onClick={() => ShowFillterTicket()}>Lọc</button>
+                    <button className="fillter-ticket-btn" onClick={() => Loc()}>Lọc</button>
 
                     <div className="fillter-ticket-col">
                         <div className="item-date-row-fillter-ticket">

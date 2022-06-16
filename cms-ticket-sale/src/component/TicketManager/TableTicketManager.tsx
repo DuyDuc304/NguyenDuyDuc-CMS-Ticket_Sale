@@ -25,7 +25,7 @@ class TableTicketManager extends React.Component {
 
     render() {
         return (
-            <div className="table-ticket-mangager">
+            <div className="table-ticket-mangager" id="tbtm">
                 <div className="row-title">
                     <div className="tkm-col1"> <p className="row1-p">STT</p> </div>
                     <div className="tkm-col2"> <p className="row1-p">Bokking code</p></div>
@@ -50,7 +50,7 @@ class TableTicketManager extends React.Component {
                     </div>
                     <div className="tkm-col6"><p>14/04/2021</p> </div>
                     <div className="tkm-col7"><p>14/04/2021</p>  </div>
-                    <div className="tkm-col8"><p>Cổng 1</p></div>
+                    <div className="tkm-col8"><p>Cổng 2</p></div>
                     <div className="tkm-col9"></div>
                 </div>
                 <div className="row1">
@@ -128,7 +128,7 @@ class TableTicketManager extends React.Component {
                     </div>
                     <div className="tkm-col6"><p>14/04/2021</p> </div>
                     <div className="tkm-col7"><p>14/04/2021</p>  </div>
-                    <div className="tkm-col8"><p>Cổng 1</p></div>
+                    <div className="tkm-col8"><p>Cổng 5</p></div>
                     <div className="tkm-col9"></div>
                 </div>
                 <div className="row1">
@@ -144,7 +144,7 @@ class TableTicketManager extends React.Component {
                     </div>
                     <div className="tkm-col6"><p>14/04/2021</p> </div>
                     <div className="tkm-col7"><p>14/04/2021</p>  </div>
-                    <div className="tkm-col8"><p>Cổng 1</p></div>
+                    <div className="tkm-col8"><p>Cổng 2</p></div>
                     <div className="tkm-col9"></div>
                 </div>
                 <div className="row2">
@@ -160,7 +160,7 @@ class TableTicketManager extends React.Component {
                     </div>
                     <div className="tkm-col6"><p>14/04/2021</p> </div>
                     <div className="tkm-col7"><p>14/04/2021</p>  </div>
-                    <div className="tkm-col8"><p>Cổng 1</p></div>
+                    <div className="tkm-col8"><p>Cổng 5</p></div>
                     <div className="tkm-col9"></div>
                 </div>
                 <div className="row1">
@@ -176,7 +176,7 @@ class TableTicketManager extends React.Component {
                     </div>
                     <div className="tkm-col6"><p>14/04/2021</p> </div>
                     <div className="tkm-col7"><p>14/04/2021</p>  </div>
-                    <div className="tkm-col8"><p>Cổng 1</p></div>
+                    <div className="tkm-col8"><p>Cổng 3</p></div>
                     <div className="tkm-col9"></div>
                 </div>
                 <div className="row2">
@@ -224,7 +224,7 @@ class TableTicketManager extends React.Component {
                     </div>
                     <div className="tkm-col6"><p>14/04/2021</p> </div>
                     <div className="tkm-col7"><p>14/04/2021</p>  </div>
-                    <div className="tkm-col8"><p>Cổng 1</p></div>
+                    <div className="tkm-col8"><p>Cổng 4</p></div>
                     <div className="tkm-col9"></div>
                 </div>
                 <div className="row1">
@@ -240,7 +240,7 @@ class TableTicketManager extends React.Component {
                     </div>
                     <div className="tkm-col6"><p>14/04/2021</p> </div>
                     <div className="tkm-col7"><p>14/04/2021</p>  </div>
-                    <div className="tkm-col8"><p>Cổng 1</p></div>
+                    <div className="tkm-col8"><p>Cổng 2</p></div>
                     <div className="tkm-col9"></div>
                 </div>
 
