@@ -9,7 +9,7 @@ import DatePicker from "sassy-datepicker";
 import { BiSearch } from "react-icons/bi";
 
 
-export const ServicePack = () => {
+const ServicePack = () => {
     const ChangeChart1 = (id: string) => {
         const checkngay: any = document.getElementById('checkngay1')
         const checktuan: any = document.getElementById('checktuan1')

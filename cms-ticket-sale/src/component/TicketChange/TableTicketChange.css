@@ -1,3 +1,18 @@
+.title-fillter-ticket-p {
+    position: absolute;
+    width: 81px;
+    height: 30px;
+    left: 24px;
+    top: 22px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    color: #1E0D03;
+}
+
 .table-ticket-change {
     position: absolute;
     width: 1049px;
