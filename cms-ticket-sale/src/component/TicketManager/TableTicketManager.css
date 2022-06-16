@@ -4,6 +4,8 @@
     left: 24px;
     width: 1519px;
     height: 624px;
+    display: flex;
+    flex-direction: column;
 }
 
 .row1-p {
@@ -11,16 +13,21 @@
     font-size: 16px;
 }
 
-.row1 {
+.row-title {
     display: flex;
     width: 1511px;
     height: 48px;
     background: #F1F4F8;
     border-radius: 8px 8px 0px 0px;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
+
+}
+
+.row1 {
+    display: flex;
+    width: 1511px;
+    height: 48px;
+    background: #F1F4F8;
+
 }
 
 .row2 {
@@ -28,10 +35,7 @@
     display: flex;
     height: 48px;
     background: #FFFFFF;
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
+
 }
 
 .tkm-col1 {

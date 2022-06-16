@@ -26,7 +26,7 @@ class TableTicketManager extends React.Component {
     render() {
         return (
             <div className="table-ticket-mangager">
-                <div className="row1">
+                <div className="row-title">
                     <div className="tkm-col1"> <p className="row1-p">STT</p> </div>
                     <div className="tkm-col2"> <p className="row1-p">Bokking code</p></div>
                     <div className="tkm-col3"><p className="row1-p"> Sô vé</p></div>

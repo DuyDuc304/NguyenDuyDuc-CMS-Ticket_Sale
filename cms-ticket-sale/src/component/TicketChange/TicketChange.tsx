@@ -23,9 +23,10 @@ export const TicketChange = () => {
                     </form>
                 </div>
                 <div className="dsv-cds-btn">
-                    <div className="add-ServicePack-btn">
-                        <p >Thêm gói vé</p>
+                    <div className="add-ServicePack-btn" id="cds" style={{ display: 'none' }}>
+                        <p >Chốt đổi soát</p>
                     </div>
+                    <a href="/TicketChange" id="xp" className="qlv-download notline" style={{ display: 'none' }}>Xuất file (.csv)</a>
                 </div>
 
                 <TableTicketChange />
