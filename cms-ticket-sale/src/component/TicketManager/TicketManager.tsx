@@ -12,10 +12,43 @@ import Topbar from "../layouts/topbar";
 import TableTicketManager from "./TableTicketManager";
 
 export const TicketManager = () => {
+    function onSumbit(e: React.SyntheticEvent) {
+        e.preventDefault();
+        const target = e.target as typeof e.target & {
+            timkiem: { value: string };
+        };
+        const timkiem = target.timkiem.value.trim();
+        const allelm: any = document.getElementById("tbtm")
+        const allrow: any = allelm.children
+        if (timkiem !== '') {
+
+            for (let i = 1; i < allrow.length; i++) {
+                const allelmr: any = allrow[i].children
+                allrow[i].style.display = 'none'
+                for (let j = 0; j < allelmr.length; j++) {
+                    if (allelmr[j].className === 'tkm-col3') {
+                        const p: any = allelmr[j].children
+                        for (let k = 0; k < p.length; k++) {
+                            if (p[k].innerText.toLowerCase().trim() === timkiem.toLowerCase()) {
+                                allrow[i].style.display = 'flex'
+                            }
+                        }
+
+                    }
+
+                }
+            }
+        } else {
+            for (let i = 1; i < allrow.length; i++) {
+
+                allrow[i].style.display = 'flex'
+            }
+        }
+    }
     function DaSuDung() {
         const allelm: any = document.getElementById("tbtm")
         const allrow: any = allelm.children
-        for (let i = 0; i < allrow.length; i++) {
+        for (let i = 1; i < allrow.length; i++) {
             const allelmr: any = allrow[i].children
             for (let j = 1; j < allelmr.length; j++) {
                 if (allelmr[j].className === "tkm-col5") {
@@ -25,6 +58,7 @@ export const TicketManager = () => {
                             allrow[i].style.display = 'flex'
 
                         }
+
 
                     }
                 }
@@ -46,12 +80,11 @@ export const TicketManager = () => {
         for (let i = 1; i < allrow.length; i++) {
             allrow[i].style.display = 'none'
         }
-
     }
     function HetHan() {
         const allelm: any = document.getElementById("tbtm")
         const allrow: any = allelm.children
-        for (let i = 0; i < allrow.length; i++) {
+        for (let i = 1; i < allrow.length; i++) {
             const allelmr: any = allrow[i].children
             for (let j = 1; j < allelmr.length; j++) {
                 if (allelmr[j].className === "tkm-col5") {
@@ -62,6 +95,7 @@ export const TicketManager = () => {
 
                         }
 
+
                     }
                 }
 
@@ -71,7 +105,7 @@ export const TicketManager = () => {
     function Cong1() {
         const allelm: any = document.getElementById("tbtm")
         const allrow: any = allelm.children
-        for (let i = 0; i < allrow.length; i++) {
+        for (let i = 1; i < allrow.length; i++) {
             const allelmr: any = allrow[i].children
             for (let j = 1; j < allelmr.length; j++) {
                 if (allelmr[j].className === "tkm-col8") {
@@ -79,7 +113,6 @@ export const TicketManager = () => {
                     for (let k = 0; k < p.length; k++) {
                         if (p[k].innerText === "Cổng 1") {
                             allrow[i].style.display = 'flex'
-
                         }
 
                     }
@@ -91,7 +124,7 @@ export const TicketManager = () => {
     function Cong2() {
         const allelm: any = document.getElementById("tbtm")
         const allrow: any = allelm.children
-        for (let i = 0; i < allrow.length; i++) {
+        for (let i = 1; i < allrow.length; i++) {
             const allelmr: any = allrow[i].children
             for (let j = 1; j < allelmr.length; j++) {
                 if (allelmr[j].className === "tkm-col8") {
@@ -99,8 +132,9 @@ export const TicketManager = () => {
                     for (let k = 0; k < p.length; k++) {
                         if (p[k].innerText === "Cổng 2") {
                             allrow[i].style.display = 'flex'
-
                         }
+
+
 
                     }
                 }
@@ -111,7 +145,7 @@ export const TicketManager = () => {
     function Cong3() {
         const allelm: any = document.getElementById("tbtm")
         const allrow: any = allelm.children
-        for (let i = 0; i < allrow.length; i++) {
+        for (let i = 1; i < allrow.length; i++) {
             const allelmr: any = allrow[i].children
             for (let j = 1; j < allelmr.length; j++) {
                 if (allelmr[j].className === "tkm-col8") {
@@ -121,7 +155,7 @@ export const TicketManager = () => {
                             allrow[i].style.display = 'flex'
 
                         }
-                        console.log(p[k])
+
                     }
                 }
 
@@ -131,7 +165,7 @@ export const TicketManager = () => {
     function Cong4() {
         const allelm: any = document.getElementById("tbtm")
         const allrow: any = allelm.children
-        for (let i = 0; i < allrow.length; i++) {
+        for (let i = 1; i < allrow.length; i++) {
             const allelmr: any = allrow[i].children
             for (let j = 1; j < allelmr.length; j++) {
                 if (allelmr[j].className === "tkm-col8") {
@@ -151,7 +185,7 @@ export const TicketManager = () => {
     function Cong5() {
         const allelm: any = document.getElementById("tbtm")
         const allrow: any = allelm.children
-        for (let i = 0; i < allrow.length; i++) {
+        for (let i = 1; i < allrow.length; i++) {
             const allelmr: any = allrow[i].children
             for (let j = 1; j < allelmr.length; j++) {
                 if (allelmr[j].className === "tkm-col8") {
@@ -171,7 +205,7 @@ export const TicketManager = () => {
     function ChuaSuDung() {
         const allelm: any = document.getElementById("tbtm")
         const allrow: any = allelm.children
-        for (let i = 0; i < allrow.length; i++) {
+        for (let i = 1; i < allrow.length; i++) {
             const allelmr: any = allrow[i].children
             for (let j = 1; j < allelmr.length; j++) {
                 if (allelmr[j].className === "tkm-col5") {
@@ -390,8 +424,8 @@ export const TicketManager = () => {
             <div className="bgapp">
                 <label className="titleapp"> Danh sách vé</label>
                 <div className="sreach-qlv">
-                    <form autoComplete='off' >
-                        <input className="sreach-input" name='tìm kiếm sô vé' type="text" placeholder='Tìm bằng số vé' />
+                    <form autoComplete='off' onSubmit={onSumbit} >
+                        <input className="sreach-input" name='timkiem' type="text" placeholder='Tìm bằng số vé' />
                         <button className="sreach-button"><BiSearch /></button>
                     </form>
                 </div>

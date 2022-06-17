@@ -102,7 +102,7 @@ class TableTicketManager extends React.Component {
                 <div className="row1">
                     <div className="tkm-col1"> <p>4</p> </div>
                     <div className="tkm-col2"><p> ALT20210501</p></div>
-                    <div className="tkm-col3"> <p>123456789034</p></div>
+                    <div className="tkm-col3"> <p>123456789031</p></div>
                     <div className="tkm-col4"> <p>Hội chợ triển lãm tiêu dùng 2021</p></div>
                     <div className="tkm-col5">
                         <div className="box-tt-hh ">
@@ -118,7 +118,7 @@ class TableTicketManager extends React.Component {
                 <div className="row2">
                     <div className="tkm-col1"> <p>5</p> </div>
                     <div className="tkm-col2"><p> ALT20210501</p></div>
-                    <div className="tkm-col3"> <p>123456789034</p></div>
+                    <div className="tkm-col3"> <p>123456789031</p></div>
                     <div className="tkm-col4"> <p>Hội chợ triển lãm tiêu dùng 2021</p></div>
                     <div className="tkm-col5">
                         <div className="box-tt-dsd ">
@@ -150,7 +150,7 @@ class TableTicketManager extends React.Component {
                 <div className="row2">
                     <div className="tkm-col1"> <p>7</p> </div>
                     <div className="tkm-col2"><p> ALT20210501</p></div>
-                    <div className="tkm-col3"> <p>123456789034</p></div>
+                    <div className="tkm-col3"> <p>123456789031</p></div>
                     <div className="tkm-col4"> <p>Hội chợ triển lãm tiêu dùng 2021</p></div>
                     <div className="tkm-col5">
                         <div className="box-tt-dsd ">
@@ -214,7 +214,7 @@ class TableTicketManager extends React.Component {
                 <div className="row2">
                     <div className="tkm-col1"> <p>11</p> </div>
                     <div className="tkm-col2"><p> ALT20210501</p></div>
-                    <div className="tkm-col3"> <p>123456789034</p></div>
+                    <div className="tkm-col3"> <p>123456789031</p></div>
                     <div className="tkm-col4"> <p>Hội chợ triển lãm tiêu dùng 2021</p></div>
                     <div className="tkm-col5">
                         <div className="box-tt-dsd ">

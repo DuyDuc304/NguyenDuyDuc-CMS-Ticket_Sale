@@ -139,7 +139,7 @@ class TableTicketChange extends React.Component {
                 <div className="row1-ticket-change">
                     <div className="ticket-change-col1"><p>6</p> </div>
                     <div className="ticket-change-col2">
-                        <p >205314876321</p>
+                        <p >205314876322</p>
                     </div>
                     <div className="ticket-change-col3">
                         <p >Hội chợ triển lãm tiêu dùng 2021</p>
@@ -206,7 +206,7 @@ class TableTicketChange extends React.Component {
                         <p >9</p>
                     </div>
                     <div className="ticket-change-col2">
-                        <p >205314876321</p>
+                        <p >205314876322</p>
                     </div>
                     <div className="ticket-change-col3">
                         <p> Hội chợ triển lãm tiêu dùng 2021 </p>
@@ -271,7 +271,7 @@ class TableTicketChange extends React.Component {
                 <div className="row1-ticket-change">
                     <div className="ticket-change-col1"><p>12</p> </div>
                     <div className="ticket-change-col2">
-                        <p >205314876321</p>
+                        <p >205314876322</p>
                     </div>
                     <div className="ticket-change-col3">
                         <p >Hội chợ triển lãm tiêu dùng 2021</p>

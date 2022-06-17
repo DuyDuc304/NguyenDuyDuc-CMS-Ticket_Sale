@@ -50,7 +50,7 @@ class TableSevicePack extends React.Component {
     }
     render() {
         return (
-            <div className="table-sevice-park">
+            <div className="table-sevice-park" id="tbgdv">
                 <div className="table-sivice-park-row">
                     <div className="table-sivice-park-col1"><p className="row1-p">STT</p></div>
                     <div className="table-sivice-park-col2"><p className="row1-p">Mã vé</p></div>
@@ -64,7 +64,7 @@ class TableSevicePack extends React.Component {
                 </div>
                 <div className="table-sivice-park-row2">
                     <div className="table-sivice-park-col1"><p>1</p></div>
-                    <div className="table-sivice-park-col2"><p>ALT20210501</p></div>
+                    <div className="table-sivice-park-col2"><p>ALT20210502</p></div>
                     <div className="table-sivice-park-col3"><p>Gói gia đình </p></div>
                     <div className="table-sivice-park-col4">
                         <div className="colum-date-time">
