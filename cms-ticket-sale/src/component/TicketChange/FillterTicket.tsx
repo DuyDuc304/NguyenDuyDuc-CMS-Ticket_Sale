@@ -15,7 +15,7 @@ const FillterTicket = () => {
             const allelmr: any = allrow[i].children
             allrow[i].style.display = 'flex'
             for (let j = 1; j < allelmr.length; j++) {
-                if (allelmr[j].className === "ticket-change-col6") {
+                if (allelmr[j].className === "ticket-change-col7") {
                     const p: any = allelmr[j].children
                     for (let k = 0; k < p.length; k++) {
                         if (p[k].innerText !== 'Chưa đối soát') {
@@ -34,7 +34,7 @@ const FillterTicket = () => {
             const allelmr: any = allrow[i].children
             allrow[i].style.display = 'flex'
             for (let j = 1; j < allelmr.length; j++) {
-                if (allelmr[j].className === "ticket-change-col6") {
+                if (allelmr[j].className === "ticket-change-col7") {
                     const p: any = allelmr[j].children
                     for (let k = 0; k < p.length; k++) {
                         if (p[k].innerText === 'Chưa đối soát') {

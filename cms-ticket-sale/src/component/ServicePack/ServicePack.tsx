@@ -226,11 +226,9 @@ const ServicePack = () => {
                     </div>
                 </div>
                 <TableSevicePack />
-                <input type="date" />
                 <div className="qlv-nextpage">
                     <Nextpage />
                 </div>
-
             </div>
             <div className="block-screen" id="addsvp"  >
                 <div className="popup-sevice-park-div">

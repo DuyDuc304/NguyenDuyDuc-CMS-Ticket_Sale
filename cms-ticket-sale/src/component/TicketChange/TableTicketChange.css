@@ -185,45 +185,6 @@
 }
 
 .ticket-change-col2 {
-    width: 217px;
-    height: 46px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 26px;
-    display: flex;
-    align-items: center;
-    color: #1E0D03;
-    border-bottom: 2px solid #F1F4F8;
-}
-
-.ticket-change-col3 {
-    width: 213px;
-    height: 46px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 26px;
-    display: flex;
-    align-items: center;
-    color: #1E0D03;
-    border-bottom: 2px solid #F1F4F8;
-}
-
-.ticket-change-col4 {
-    width: 181px;
-    height: 46px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 26px;
-    display: flex;
-    align-items: center;
-    color: #1E0D03;
-    border-bottom: 2px solid #F1F4F8;
-}
-
-.ticket-change-col5 {
     width: 139px;
     height: 46px;
     font-style: normal;
@@ -236,8 +197,60 @@
     border-bottom: 2px solid #F1F4F8;
 }
 
+.ticket-change-col3 {
+    width: 264px;
+    height: 46px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #1E0D03;
+    border-bottom: 2px solid #F1F4F8;
+}
+
+.ticket-change-col4 {
+    width: 144px;
+    height: 46px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #1E0D03;
+    border-bottom: 2px solid #F1F4F8;
+}
+
+.ticket-change-col5 {
+    width: 95px;
+    height: 46px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #1E0D03;
+    border-bottom: 2px solid #F1F4F8;
+}
+
 .ticket-change-col6 {
-    width: 195px;
+    width: 159px;
+    height: 46px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #1E0D03;
+    border-bottom: 2px solid #F1F4F8;
+}
+
+.ticket-change-col7 {
+    width: 157px;
     height: 46px;
     display: flex;
     margin: auto;
@@ -251,7 +264,7 @@
     border-bottom: 2px solid #F1F4F8;
 }
 
-.ticket-change-col6 p {
+.ticket-change-col7 p {
     margin: auto;
 }
 
