@@ -411,12 +411,12 @@ const ServicePack = () => {
                             <div className="colum-date-time-picker">
                                 <p className="add-sevice-park-conten-item">Ngày sử dụng</p>
                                 <div className="row-date-time-picker">
-                                    <div className="date-time-picker-sevice-park">
-                                        <div className="date-time-picker-sevice-park" onClick={() => ShowCalenda2('calen3')}>
-                                            <p className='date-time-picker-sevice-park-p' id="datechange1"> {date.toLocaleDateString()}</p>
-                                            <p className='calenda-icon' ><FiCalendar /></p>
-                                        </div>
+
+                                    <div className="date-time-picker-sevice-park" onClick={() => ShowCalenda2('calen3')}>
+                                        <p className='date-time-picker-sevice-park-p' id="datechange1"> {date.toLocaleDateString()}</p>
+                                        <p className='calenda-icon' ><FiCalendar /></p>
                                     </div>
+
                                     <div className="date-time-picker-sevice-park">
                                         <input className="input-time-sevive-park" type="time" id="clock1" />
                                     </div>
@@ -425,12 +425,12 @@ const ServicePack = () => {
                             <div className="colum-date-time-picker">
                                 <p className="add-sevice-park-conten-item">Ngày hết hạn</p>
                                 <div className="row-date-time-picker">
-                                    <div className="date-time-picker-sevice-park">
-                                        <div className="date-time-picker-sevice-park" onClick={() => ShowCalenda2('calen4')}>
-                                            <p className='date-time-picker-sevice-park-p' id="datechange1"> {date.toLocaleDateString()}</p>
-                                            <p className='calenda-icon' ><FiCalendar /></p>
-                                        </div>
+
+                                    <div className="date-time-picker-sevice-park" onClick={() => ShowCalenda2('calen4')}>
+                                        <p className='date-time-picker-sevice-park-p' id="datechange1"> {date.toLocaleDateString()}</p>
+                                        <p className='calenda-icon' ><FiCalendar /></p>
                                     </div>
+
                                     <div className="date-time-picker-sevice-park">
                                         <input className="input-time-sevive-park" type="time" id="clock2" />
                                     </div>

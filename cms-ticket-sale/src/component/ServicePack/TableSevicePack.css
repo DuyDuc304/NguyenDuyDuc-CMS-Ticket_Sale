@@ -1,14 +1,25 @@
 .table-sevice-park {
     position: absolute;
     width: 1516px;
-    height: 160px;
+    height: auto;
     left: 24px;
     top: 192px;
     display: flex;
     flex-direction: column;
 }
 
+.table-sevice-park1 {
+    position: absolute;
+    width: 1516px;
+    height: auto;
+    left: 24px;
+
+    display: flex;
+    flex-direction: column;
+}
+
 .table-sivice-park-row {
+
     display: flex;
     width: 1516px;
     height: 52px;
@@ -17,6 +28,7 @@
 }
 
 .table-sivice-park-row1 {
+
     display: flex;
     width: 1516px;
     height: 52px;
@@ -24,6 +36,7 @@
 }
 
 .table-sivice-park-row2 {
+
     display: flex;
     width: 1516px;
     height: 52px;
@@ -47,6 +60,7 @@
 
 .table-sivice-park-col1 p {
     margin: auto;
+
 }
 
 .table-sivice-park-col2 {
@@ -59,6 +73,14 @@
     display: flex;
     align-items: center;
     color: #1E0D03
+}
+
+.row-none {
+    display: flex;
+    flex-direction: row;
+    width: 1516px;
+    height: 52px;
+    background-color: transparent;
 }
 
 .table-sivice-park-col3 {

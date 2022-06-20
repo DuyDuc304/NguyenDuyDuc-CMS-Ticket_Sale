@@ -45,7 +45,7 @@ export function DonutChart() {
         <div>
             {/* lịch tuần hoặc ngày donut chart*/}
             <div className="home-calenda-div" style={{ marginLeft: '32px', marginTop: '610px' }}>
-                <p className='calenda-date'> Tháng {date.getMonth()}, {date.getFullYear()}</p>
+                <p className='calenda-date'> Tháng {date.getMonth() + 1}, {date.getFullYear()}</p>
                 <p className='calenda-icon'><FiCalendar /></p>
             </div>
             {/* Donut Char  */}
