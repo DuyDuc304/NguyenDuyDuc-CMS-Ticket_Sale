@@ -3,7 +3,7 @@ import { BiHomeAlt } from 'react-icons/bi';
 import { TbTicket, TbSettings } from 'react-icons/tb'
 import { RiFileList3Line } from 'react-icons/ri'
 import { MdCopyright } from 'react-icons/md'
-import logo from './logo.svg'
+import logo from '../assets/images/logo.svg'
 type idbtn = {
     buttonid: string
 }

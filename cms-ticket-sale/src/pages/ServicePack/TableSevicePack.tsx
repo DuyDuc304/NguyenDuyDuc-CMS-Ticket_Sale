@@ -1,7 +1,7 @@
 import React from "react"
 import './TableSevicePack.css'
 import { HiOutlinePencilAlt } from 'react-icons/hi'
-import Data1 from '../Data/ListPackService.json'
+import Data1 from '../../assets/data/ListPackService.json'
 
 
 var time = new Date();
@@ -114,9 +114,9 @@ export const TableSevicePack = () => {
     }
     function setcolor(id: number) {
         if (id % 2 === 1) {
-            return 'table-sivice-park-row2'
-        } else {
             return 'table-sivice-park-row1'
+        } else {
+            return 'table-sivice-park-row2'
         }
     }
     function setdatetime() {
@@ -147,8 +147,8 @@ export const TableSevicePack = () => {
             <div id="dataServicePack">
 
             </div>
-            {Data1.map((item) => (
-                <ul className={setcolor(item.id)} key={item.id}>
+            {Data1.map((item, index) => (
+                <ul className={setcolor(index)} key={item.id}>
                     < div className="table-sivice-park-col1" > <p>{item.STT}</p></div>
                     <div className="table-sivice-park-col2"><p>{item.TicketNumber}</p></div>
                     <div className="table-sivice-park-col3"><p>{item.NamePacket}</p></div>

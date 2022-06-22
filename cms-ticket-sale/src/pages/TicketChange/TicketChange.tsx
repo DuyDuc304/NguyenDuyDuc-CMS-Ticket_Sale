@@ -1,9 +1,9 @@
 import React from "react";
 import { BiSearch } from "react-icons/bi";
-import { Menubar } from "../layouts/menubar";
-import Nextpage from "../layouts/nextpage";
-import Sreach from "../layouts/sreach";
-import Topbar from "../layouts/topbar";
+import { Menubar } from "../../components/menubar";
+import Nextpage from "../../components/nextpage";
+import Sreach from "../../components/sreach";
+import Topbar from "../../components/topbar";
 import FillterTicket from "./FillterTicket";
 import TableTicketChange from "./TableTicketChange";
 import './TableTicketChange.css'

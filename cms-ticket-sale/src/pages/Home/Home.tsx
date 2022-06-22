@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { Menubar } from '../layouts/menubar';
-import Sreach from '../layouts/sreach';
-import Topbar from '../layouts/topbar';
+import { Menubar } from '../../components/menubar';
+import Sreach from '../../components/sreach';
+import Topbar from '../../components/topbar';
 import { DonutChart } from './DonutChart';
 import { LineChart } from './LineChart';
 

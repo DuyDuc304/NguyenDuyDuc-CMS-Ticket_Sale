@@ -4,11 +4,11 @@ import { BiSearch } from "react-icons/bi";
 import { FiCalendar } from "react-icons/fi";
 import { TbFilter } from "react-icons/tb";
 import DatePicker from "sassy-datepicker";
-import { Daypicker } from "../layouts/Daypicker";
-import { Menubar } from "../layouts/menubar";
-import Nextpage from "../layouts/nextpage";
-import Sreach from "../layouts/sreach";
-import Topbar from "../layouts/topbar";
+import { Daypicker } from "../../components/Daypicker";
+import { Menubar } from "../../components/menubar";
+import Nextpage from "../../components/nextpage";
+import Sreach from "../../components/sreach";
+import Topbar from "../../components/topbar";
 import TableTicketManager from "./TableTicketManager";
 
 export const TicketManager = () => {

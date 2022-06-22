@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./component/Home/Home";
-import ServicePack from "./component/ServicePack/ServicePack";
-import TicketChange from "./component/TicketChange/TicketChange";
-import TicketManager from "./component/TicketManager/TicketManager";
-import './style/App.css';
+import Home from "./pages/Home/Home";
+import ServicePack from "./pages/ServicePack/ServicePack";
+import TicketChange from "./pages/TicketChange/TicketChange";
+import TicketManager from "./pages/TicketManager/TicketManager";
+import './pages/App.css';
 
 const App: React.FC = () => {
     return (

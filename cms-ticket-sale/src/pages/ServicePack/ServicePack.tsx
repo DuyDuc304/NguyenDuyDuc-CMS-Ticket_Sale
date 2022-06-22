@@ -1,7 +1,7 @@
 import React from "react";
-import { Menubar } from "../layouts/menubar";
-import Nextpage from "../layouts/nextpage";
-import Topbar from "../layouts/topbar";
+import { Menubar } from "../../components/menubar";
+import Nextpage from "../../components/nextpage";
+import Topbar from "../../components/topbar";
 import TableSevicePack from "./TableSevicePack";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { FiCalendar } from "react-icons/fi";
