@@ -4,7 +4,7 @@ import { Menubar } from "../../components/menubar";
 import Nextpage from "../../components/nextpage";
 import Sreach from "../../components/sreach";
 import Topbar from "../../components/topbar";
-import FillterTicket from "./FillterTicket";
+import FillterTicket from "./FillterTicket-Change";
 import TableTicketChange from "./TableTicketChange";
 import './TableTicketChange.css'
 
@@ -28,9 +28,7 @@ export const TicketChange = () => {
                     </div>
                     <a href="/TicketChange" id="xf" className="qlv-download notline" style={{ display: 'none' }}>Xuất file (.csv)</a>
                 </div>
-
                 <TableTicketChange />
-
                 <div className="dsv-nextpage"><Nextpage /></div>
             </div>
             <FillterTicket />
