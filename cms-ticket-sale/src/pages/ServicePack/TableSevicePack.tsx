@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react"
 import './TableSevicePack.css'
 import { HiOutlinePencilAlt } from 'react-icons/hi'
-//import data from '../../assets/data/ListPackService.json'
-
 var time = new Date();
 export const TableSevicePack = () => {
     const [data, setdata] = useState([])
+    //call api bằng json server
     useEffect(() => {
         var constAPI = '  http://localhost:3000/ServicePackData'
         const fetchItem = async () => {

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react"
 import './TableTicketManager.css'
 import { BsThreeDotsVertical } from 'react-icons/bs';
-//import data from '../../assets/data/ListTicket.json'
-
 export const TableTicketManager = () => {
     function setcolor(id: number) {
         if (id % 2 === 1) {
@@ -12,6 +10,7 @@ export const TableTicketManager = () => {
         }
     }
     const [data, setdata] = useState([])
+    //call api bằng json server
     useEffect(() => {
         var constAPI = 'http://localhost:3000/Ticket'
         const fetchItem = async () => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
-//import data from '../../assets/data/ListTicket.json'
 export const TableTicketChange = () => {
     const [data, setdata] = useState([])
+    //call api bằng json server
     useEffect(() => {
         var constAPI = ' http://localhost:3000/Ticket'
         const fetchItem = async () => {
