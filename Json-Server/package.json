@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --watch ListServicePack.json",
+    "start": "json-server --watch Data.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

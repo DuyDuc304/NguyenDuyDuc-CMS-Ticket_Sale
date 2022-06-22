@@ -8,7 +8,9 @@
             "TypeTicket": "Vé cổng",
             "TicketStatus": "Đã sử dụng",
             "Date": "20-01-2022",
+            "Time": "08:00",
             "DateEnd": "28-02-2022",
+            "TimeEnd": "12:00",
             "TicketPrice": "90.000",
             "TicketComboPrice": "360.000 VND /4 vé",
             "Status": true
@@ -21,7 +23,9 @@
             "TypeTicket": "Vé cổng",
             "TicketStatus": "Đã sử dụng",
             "Date": "20-01-2022",
+            "Time": "08:30",
             "DateEnd": "28-02-2022",
+            "TimeEnd": "12:00",
             "TicketPrice": "90.000",
             "TicketComboPrice": "",
             "Status": false
@@ -76,7 +80,7 @@
             "BookingCode": "ALT20210501",
             "TicketNumber": "123456789304",
             "NameTicket": "Hội chợ triển lảm tiêu dùng 2021",
-            "StatusUse": "hh",
+            "StatusUse": "csd",
             "TypeTicket": "Vé cổng",
             "TicketStatus": "Đã sử dụng",
             "Date": "20-01-2022",

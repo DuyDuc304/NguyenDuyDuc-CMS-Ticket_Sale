@@ -46,16 +46,16 @@ export const TableTicketManager = () => {
             )
         }
     }
-    function setEdit(status: string) {
+    function setEdit(status: string, id: number) {
         if (status === "csd") {
             return (
                 <div className="row-col9">
-                    <div className="div-col9" onClick={() => showchose()}>
+                    <div className="div-col9" onClick={() => showchose(id)}>
                         <p  >
                             <BsThreeDotsVertical />
                         </p>
                     </div>
-                    <div className="row-box-chose " id="chosebox">
+                    <div className="row-box-chose " id={id.toString()}>
                         <div className="tkm-chose">
                             <div className="item-chose" onClick={() => TurnOnUseTicket()} id='sdv'><p>Sử dụng vé</p></div>
                             <div className="item-chose" onClick={() => Showchangedate()}><p>Đổi ngày sử dụng</p></div>
@@ -68,14 +68,13 @@ export const TableTicketManager = () => {
             return ('')
         }
     }
-    function showchose() {
-        const chose: any = document.getElementById('chosebox')
+    function showchose(id: number) {
+        const chose: any = document.getElementById(id.toString())
         if (chose.style.display === 'none') {
             chose.style.display = 'flex'
         } else {
             chose.style.display = 'none'
         }
-
     }
     function TurnOnUseTicket() {
         const xn: any = document.getElementById('bls-xn')
@@ -113,7 +112,7 @@ export const TableTicketManager = () => {
                     <div className="tkm-col7"><p>{item.DateEnd}</p>  </div>
                     <div className="tkm-col8"><p>{item.Gate}</p></div>
                     <div className="tkm-col9">
-                        {setEdit(item.StatusUse)}
+                        {setEdit(item.StatusUse, item.id)}
                     </div>
                 </div>
             ))}

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import './TableSevicePack.css'
 import { HiOutlinePencilAlt } from 'react-icons/hi'
-var time = new Date();
+
 export const TableSevicePack = () => {
     const [data, setdata] = useState([])
     //call api bằng json server
@@ -74,12 +74,14 @@ export const TableSevicePack = () => {
         }
     }
     function setdatetime() {
-        const clock1: any = document.getElementById('clock1')
-        const clock2: any = document.getElementById('clock2')
-        const checkgd1: any = document.getElementById('checkgd1')
-        const gvgd1: any = document.getElementById('gvgd1')
+        var time = new Date();
+        const clock1: any = document.querySelector('#clock1')
+        const clock2: any = document.querySelector('#clock2')
         clock1.value = time.getHours() + ':' + time.getMinutes()
         clock2.value = time.getHours() + ':' + time.getMinutes()
+        const checkgd1: any = document.getElementById('checkgd1')
+        const gvgd1: any = document.getElementById('gvgd1')
+
         checkgd1.checked = true
         CheckGiaVe1('checkgd1')
         gvgd1.value = 90000
@@ -107,13 +109,13 @@ export const TableSevicePack = () => {
                     <div className="table-sivice-park-col4">
                         <div className="colum-date-time">
                             <label> {item.Date} </label>
-                            <label> 08:00:00</label>
+                            <label> {item.Time}</label>
                         </div>
                     </div>
                     <div className="table-sivice-park-col5">
                         <div className="colum-date-time">
                             <label> {item.DateEnd} </label>
-                            <label> 08:00:00</label>
+                            <label> {item.TimeEnd} </label>
                         </div>
                     </div>
                     <div className="table-sivice-park-col6">

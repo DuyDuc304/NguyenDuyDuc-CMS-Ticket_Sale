@@ -4,14 +4,10 @@ import { Daypicker } from '../../components/Daypicker'
 export const ChangeDateUseTicket = () => {
     function TurnOffChangeDate() {
         const bls: any = document.getElementById('bls-dnsdv')
-        const chose: any = document.getElementById('chosebox')
-        chose.style.display = 'none'
         bls.style.display = 'none'
     }
     function Savechange() {
         const bls: any = document.getElementById('bls-dnsdv')
-        const chose: any = document.getElementById('chosebox')
-        chose.style.display = 'none'
         bls.style.display = 'none'
     }
     return (
