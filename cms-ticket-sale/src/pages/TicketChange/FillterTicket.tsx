@@ -8,52 +8,6 @@ const FillterTicket = () => {
         setDate(newDate);
 
     }
-    function ChuaDoiSoat() {
-        const allelm: any = document.getElementById("tbtc")
-        const allrow: any = allelm.children
-        for (let i = 0; i < allrow.length; i++) {
-            const allelmr: any = allrow[i].children
-            allrow[i].style.display = 'flex'
-            for (let j = 1; j < allelmr.length; j++) {
-                if (allelmr[j].className === "ticket-change-col7") {
-                    const p: any = allelmr[j].children
-                    for (let k = 0; k < p.length; k++) {
-                        if (p[k].innerText !== 'Chưa đối soát') {
-                            allrow[i].style.display = 'none'
-                        }
-                    }
-                }
-
-            }
-        }
-    }
-    function DaDoiSoat() {
-        const allelm: any = document.getElementById("tbtc")
-        const allrow: any = allelm.children
-        for (let i = 0; i < allrow.length; i++) {
-            const allelmr: any = allrow[i].children
-            allrow[i].style.display = 'flex'
-            for (let j = 1; j < allelmr.length; j++) {
-                if (allelmr[j].className === "ticket-change-col7") {
-                    const p: any = allelmr[j].children
-                    for (let k = 0; k < p.length; k++) {
-                        if (p[k].innerText === 'Chưa đối soát') {
-                            allrow[i].style.display = 'none'
-                        }
-                    }
-                }
-
-            }
-        }
-    }
-    function tatca() {
-        const allelm: any = document.getElementById("tbtc")
-        const allrow: any = allelm.children
-        for (let i = 0; i < allrow.length; i++) {
-
-            allrow[i].style.display = 'flex'
-        }
-    }
 
     const ShowCalenda = () => {
         const calen: any = document.getElementById('calen')
@@ -72,21 +26,21 @@ const FillterTicket = () => {
         const checkdds: any = document.getElementById('checkdds')
         const checkcds: any = document.getElementById('checkcds')
         const cds: any = document.getElementById('cds')
-        const xp: any = document.getElementById('xp')
+        const xf: any = document.getElementById('xf')
         if (checktc.checked === true) {
             cds.style.display = 'none'
-            xp.style.display = 'none'
-            tatca()
+            xf.style.display = 'none'
+
         }
         if (checkdds.checked === true) {
             cds.style.display = 'none'
-            xp.style.display = 'flex'
-            DaDoiSoat()
+            xf.style.display = 'flex'
+
         }
         if (checkcds.checked === true) {
             cds.style.display = 'flex'
-            xp.style.display = 'none'
-            ChuaDoiSoat()
+            xf.style.display = 'none'
+
         }
     }
     const ChangeCheck = (id: string) => {
