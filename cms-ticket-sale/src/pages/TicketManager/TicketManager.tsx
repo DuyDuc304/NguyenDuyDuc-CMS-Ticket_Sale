@@ -67,22 +67,7 @@ export const TicketManager = () => {
 
     }
     function useticket() {
-        const col5: any = document.getElementById('col5')
-        const sdv: any = document.getElementById('sdv')
-        const csd: any = document.getElementById('csd')
-        const chose: any = document.getElementById('chosebox')
-        col5.removeChild(csd)
-        const div: any = document.createElement('div')
-        const label: any = document.createElement('label')
-        const p: any = document.createElement('p')
-        div.className = 'box-tt-dsd'
-        p.innerText = 'Đã sử dụng'
-        label.innerText = '•'
-        div.appendChild(p)
-        div.appendChild(label)
-        col5.appendChild(div)
-        chose.style.display = 'none'
-        sdv.style.pointerEvents = ' none'
+
         TurnOffUseTicket()
     }
     function ShowFillterTicket() {

@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import './TableTicketManager.css'
 import { BsThreeDotsVertical } from 'react-icons/bs';
-import Data from '../../assets/data/ListTicket.json'
+//import data from '../../assets/data/ListTicket.json'
+
 export const TableTicketManager = () => {
     function setcolor(id: number) {
         if (id % 2 === 1) {
@@ -10,6 +11,17 @@ export const TableTicketManager = () => {
             return 'row2'
         }
     }
+    const [data, setdata] = useState([])
+    useEffect(() => {
+        var constAPI = 'http://localhost:3000/Ticket'
+        const fetchItem = async () => {
+            const result = await fetch(constAPI).then(function (response) {
+                return response.json()
+            })
+            setdata(result)
+        }
+        fetchItem()
+    }, [])
     function setStatus(status: string) {
         if (status === "dsd") {
             return (
@@ -89,7 +101,7 @@ export const TableTicketManager = () => {
                 <div className="tkm-col8"> <p className="row1-p">Cổng check-in</p></div>
                 <div className="tkm-col9"></div>
             </div>
-            {Data.map((item, index) => (
+            {data.map((item: any, index: any) => (
                 <div className={setcolor(index)} key={item.id}>
                     <div className="tkm-col1"> <p>{item.STT}</p> </div>
                     <div className="tkm-col2"><p>{item.BookingCode}</p></div>

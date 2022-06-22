@@ -1,68 +1,21 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import './TableSevicePack.css'
 import { HiOutlinePencilAlt } from 'react-icons/hi'
-import Data1 from '../../assets/data/ListPackService.json'
-
+//import data from '../../assets/data/ListPackService.json'
 
 var time = new Date();
-
 export const TableSevicePack = () => {
-    function start() {
-        getDATA(function (Data: any) {
-            LoadData(Data)
-        })
-    }
-    start()
-    function getDATA(callback: any) {
+    const [data, setdata] = useState([])
+    useEffect(() => {
         var constAPI = '  http://localhost:3000/ServicePackData'
-        fetch(constAPI).then(function (response) {
-            return response.json()
-        })
-            .then(callback)
-    }
-
-    function LoadData(Data: any) {
-        var div: any = document.getElementById('dataServicePack')
-        var html: any = Data.map(function (item: any) {
-            return (
-                <ul className={setcolor(item.id)} key={item.id}>
-                    <div className="table-sivice-park-col1" > <p>{item.STT}</p></div>
-                    <div className="table-sivice-park-col2"><p>{item.TicketNumber}</p></div>
-                    <div className="table-sivice-park-col3"><p>{item.NamePacket}</p></div>
-                    <div className="table-sivice-park-col4">
-                        <div className="colum-date-time">
-                            <label> {item.Date} </label>
-                            <label> 08:00:00</label>
-                        </div>
-                    </div>
-                    <div className="table-sivice-park-col5">
-                        <div className="colum-date-time">
-                            <label> {item.DateEnd} </label>
-                            <label> 08:00:00</label>
-                        </div>
-                    </div>
-                    <div className="table-sivice-park-col6">
-                        <div className="number-money-ticket">
-                            <label> {item.TicketPrice} VND</label>
-
-                        </div>
-                    </div>
-                    <div className="table-sivice-park-col7"><p>{item.TicketComboPrice} </p></div>
-                    <div className="table-sivice-park-col8">
-                        {status(item.Status)}
-                    </div>
-                    <div className="table-sivice-park-col9">
-                        <div className="row-update" onClick={() => ShowSevicePark('updatesvp')}>
-                            <p className="icon-update" ><HiOutlinePencilAlt /></p>
-                            <p >Cập nhật</p>
-                        </div>
-                    </div>
-                </ul>)
-        })
-        div.innerHTML = html.innerHTML
-
-    }
-
+        const fetchItem = async () => {
+            const result = await fetch(constAPI).then(function (response) {
+                return response.json()
+            })
+            setdata(result)
+        }
+        fetchItem()
+    }, [])
 
     function ShowSevicePark(id: string) {
         const add: any = document.getElementById(id)
@@ -133,6 +86,7 @@ export const TableSevicePack = () => {
         gvgd1.value = 90000
 
     }
+
     return (
         <div className="table-sevice-park" id="tbgdv">
             <div className="table-sivice-park-row">
@@ -146,10 +100,7 @@ export const TableSevicePack = () => {
                 <div className="table-sivice-park-col8"><p className="row1-p">Tình trạng</p></div>
                 <div className="table-sivice-park-col9"></div>
             </div>
-            <div id="dataServicePack">
-
-            </div>
-            {/* {Data1.map((item, index) => (
+            {data.map((item: any, index: any) => (
                 <ul className={setcolor(index)} key={item.id}>
                     < div className="table-sivice-park-col1" > <p>{item.STT}</p></div>
                     <div className="table-sivice-park-col2"><p>{item.TicketNumber}</p></div>
@@ -183,7 +134,7 @@ export const TableSevicePack = () => {
                         </div>
                     </div>
                 </ul>
-            ))} */}
+            ))}
         </div>
     )
 
