@@ -51,15 +51,21 @@ export const TableSevicePack = () => {
             return 'table-sivice-park-row2'
         }
     }
-    function setGiaComBo(giave: string) {
-
-        if (giave.trim() === "VND / vé") {
-            return null
-        } else {
-            return giave
+    function checkPrice(price: String) {
+        if (price !== "") {
+            return "VND"
         }
     }
-
+    function checkPriceCombo(price: String) {
+        if (price !== "") {
+            return "VND/"
+        }
+    }
+    function checkNumberCombo(price: String) {
+        if (price !== "") {
+            return "vé"
+        }
+    }
 
     return (
         <div className="table-sevice-park" id="tbgdv">
@@ -93,11 +99,10 @@ export const TableSevicePack = () => {
                     </div>
                     <div className="table-sivice-park-col6">
                         <div className="number-money-ticket">
-                            <label> {item.TicketPrice} VND</label>
-
+                            <label> {item.TicketPrice} {checkPrice(item.TicketPrice)}</label>
                         </div>
                     </div>
-                    <div className="table-sivice-park-col7"><p>{setGiaComBo(item.TicketComboPrice)} </p></div>
+                    <div className="table-sivice-park-col7"><p>{item.TicketComboPrice} {checkPriceCombo(item.TicketComboPrice)}{item.NumberTicketCombo} {checkNumberCombo(item.NumberTicketCombo)} </p></div>
                     <div className="table-sivice-park-col8">
                         {status(item.Status)}
                     </div>

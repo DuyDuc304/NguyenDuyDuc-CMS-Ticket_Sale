@@ -10,8 +10,9 @@
       "Time": "08:00",
       "DateEnd": "28-02-2022",
       "TimeEnd": "12:00",
-      "TicketPrice": "90.000",
-      "TicketComboPrice": "360.000 VND /4 vé",
+      "TicketPrice": "90.000 ",
+      "TicketComboPrice": "360.000 ",
+      "NumberTicketCombo": "4 ",
       "Status": true
     },
     {
@@ -24,8 +25,9 @@
       "Time": "08:30",
       "DateEnd": "28-02-2022",
       "TimeEnd": "12:00",
-      "TicketPrice": "90.000",
+      "TicketPrice": "90.000 ",
       "TicketComboPrice": "",
+      "NumberTicketCombo": "",
       "Status": false
     }
   ],

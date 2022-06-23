@@ -74,8 +74,8 @@ const AddServicePack = () => {
             body: JSON.stringify(data)
         }
         fetch(constAPI, option)
-        console.log('post', data)
     }
+
 
     function addServicepack() {
         var NamePacket: any = document.getElementById('NamePack')
@@ -86,12 +86,11 @@ const AddServicePack = () => {
         var TicketPrice: any = document.getElementById('gvgd')
         var TicketComboPrice: any = document.getElementById('gvcb')
         var sove: any = document.getElementById('sove')
-        var Status: any = document.getElementById('inputfeel1')
-        var StatusTicket: boolean = false
-        if (Status.value === "Đang áp dụng") {
-            StatusTicket = true
+        var Status: any = document.getElementById('AddStatus')
+        var StatusTicket: boolean = true
+        if (Status.innerText === "Tắt") {
+            StatusTicket = false
         }
-
         var formdata = {
             TicketNumber: "ALT20210501",
             NamePacket: NamePacket.value,
@@ -102,9 +101,11 @@ const AddServicePack = () => {
             DateEnd: DateEnd.innerText,
             TimeEnd: TimeEnd.value,
             TicketPrice: TicketPrice.value,
-            TicketComboPrice: TicketComboPrice.value + " VND /" + sove.value + " vé",
+            TicketComboPrice: TicketComboPrice.value,
+            NumberTicketCombo: sove.value,
             Status: StatusTicket
         }
+
         createServicepark(formdata)
         return (window.location.href = '/ServicePack')
     }
@@ -245,7 +246,7 @@ const AddServicePack = () => {
                     </div>
                     <p className="add-sevice-park-conten-item">Tình trạng</p>
                     <div className="row-tt-sevice-park" onClick={() => ShowFeelsevice('drdf', 'up', 'down')}>
-                        <p id="inputstatus">Chọn tình trạng</p>
+                        <p id="AddStatus">Chọn tình trạng</p>
                         <label id="down" ><IoIosArrowDown /></label>
                         <label id="up" style={{ display: 'none' }}><IoIosArrowUp /></label>
                     </div>
@@ -254,8 +255,8 @@ const AddServicePack = () => {
                         <p className="ttbc">Là thông tin bắt buộc</p>
                     </div>
                     <div id="drdf" className="dropdownfeel" onClick={() => ShowFeelsevice('drdf', 'up', 'down')}>
-                        <div className="dropdownfeel-item" onClick={() => chose('chose-dad', "inputstatus")}><p id="chose-dad">Đang áp dụng</p></div>
-                        <div className="dropdownfeel-item" onClick={() => chose('chose-t', "inputstatus")}><p id="chose-t">Tắt</p></div>
+                        <div className="dropdownfeel-item" onClick={() => chose('chose-dad', "AddStatus")}><p id="chose-dad">Đang áp dụng</p></div>
+                        <div className="dropdownfeel-item" onClick={() => chose('chose-t', "AddStatus")}><p id="chose-t">Tắt</p></div>
                     </div>
                     <div className='home-calenda-popup' id='calen1' style={{ marginLeft: '0px', marginTop: '160px' }} >
                         <p >{date.toLocaleDateString()}</p>
