@@ -9,7 +9,6 @@ class Nextpage extends React.Component {
         }
         const num: any = document.getElementById(id)
         num.classList.add('page-number-onclick')
-
     }
     prev() {
         const allpage: any = document.getElementById("r")
@@ -19,8 +18,7 @@ class Nextpage extends React.Component {
                 const idpage: string = page[i].id
                 if (parseInt(idpage) > 1) {
                     const tg: number = parseInt(idpage) - 1
-                    const idp: string = tg.toString()
-                    this.page(idp)
+                    this.page(tg.toString())
                     break;
                 }
                 break;
@@ -36,8 +34,7 @@ class Nextpage extends React.Component {
                 const idpage: string = page[a].id
                 if (parseInt(idpage) < page.length - 2) {
                     const tg: number = parseInt(idpage) + 1;
-                    const idp: string = tg.toString();
-                    this.page(idp)
+                    this.page(tg.toString())
                     break;
                 }
                 break;

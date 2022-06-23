@@ -14,6 +14,7 @@ export const TableSevicePack = () => {
             setdata(result)
         }
         fetchItem()
+
     }, [])
 
     function ShowSevicePark(id: string) {
@@ -23,32 +24,9 @@ export const TableSevicePack = () => {
         } else {
             add.style.display = 'none'
         }
-        setdatetime()
+
     }
-    function CheckGiaVe1(id: string) {
-        const inputgd: any = document.getElementById('gvgd1')
-        const inputcb: any = document.getElementById('gvcb1')
-        const inputsv: any = document.getElementById('sove1')
-        const checkon: any = document.getElementById(id)
-        if (id === 'checkgd1') {
-            if (checkon.checked === true) {
-                inputgd.disabled = false
-            } else {
-                inputgd.disabled = true
-                inputgd.value = null
-            }
-        } else {
-            if (checkon.checked === true) {
-                inputcb.disabled = false
-                inputsv.disabled = false
-            } else {
-                inputcb.disabled = true
-                inputsv.disabled = true
-                inputsv.value = null
-                inputcb.value = null
-            }
-        }
-    }
+
     function status(status: boolean) {
         if (status) {
             return (
@@ -73,20 +51,15 @@ export const TableSevicePack = () => {
             return 'table-sivice-park-row2'
         }
     }
-    function setdatetime() {
-        var time = new Date();
-        const clock1: any = document.querySelector('#clock1')
-        const clock2: any = document.querySelector('#clock2')
-        clock1.value = time.getHours() + ':' + time.getMinutes()
-        clock2.value = time.getHours() + ':' + time.getMinutes()
-        const checkgd1: any = document.getElementById('checkgd1')
-        const gvgd1: any = document.getElementById('gvgd1')
+    function setGiaComBo(giave: string) {
 
-        checkgd1.checked = true
-        CheckGiaVe1('checkgd1')
-        gvgd1.value = 90000
-
+        if (giave.trim() === "VND / vé") {
+            return null
+        } else {
+            return giave
+        }
     }
+
 
     return (
         <div className="table-sevice-park" id="tbgdv">
@@ -103,7 +76,7 @@ export const TableSevicePack = () => {
             </div>
             {data.map((item: any, index: any) => (
                 <ul className={setcolor(index)} key={item.id}>
-                    < div className="table-sivice-park-col1" > <p>{item.STT}</p></div>
+                    < div className="table-sivice-park-col1" > <p>{index + 1}</p></div>
                     <div className="table-sivice-park-col2"><p>{item.TicketNumber}</p></div>
                     <div className="table-sivice-park-col3"><p>{item.NamePacket}</p></div>
                     <div className="table-sivice-park-col4">
@@ -124,7 +97,7 @@ export const TableSevicePack = () => {
 
                         </div>
                     </div>
-                    <div className="table-sivice-park-col7"><p>{item.TicketComboPrice} </p></div>
+                    <div className="table-sivice-park-col7"><p>{setGiaComBo(item.TicketComboPrice)} </p></div>
                     <div className="table-sivice-park-col8">
                         {status(item.Status)}
                     </div>

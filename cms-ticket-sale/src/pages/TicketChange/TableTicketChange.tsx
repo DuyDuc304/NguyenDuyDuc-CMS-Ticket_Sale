@@ -59,7 +59,7 @@ export const TableTicketChange = () => {
             {data.map((item: any, index: any) => (
                 <ul className={setcolor(index)} key={item.id}>
                     <div className="ticket-change-col1">
-                        <p >{item.STT}</p>
+                        <p >{index + 1}</p>
                     </div>
                     <div className="ticket-change-col2">
                         <p >{item.TicketNumber}</p>

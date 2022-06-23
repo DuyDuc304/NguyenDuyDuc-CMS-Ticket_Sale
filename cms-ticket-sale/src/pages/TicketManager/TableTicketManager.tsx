@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react"
 import './TableTicketManager.css'
 import { BsThreeDotsVertical } from 'react-icons/bs';
+
+
 export const TableTicketManager = () => {
     function setcolor(id: number) {
         if (id % 2 === 1) {
@@ -11,6 +13,7 @@ export const TableTicketManager = () => {
     }
     const [data, setdata] = useState([])
     //call api bằng json server
+
     useEffect(() => {
         var constAPI = 'http://localhost:3000/Ticket'
         const fetchItem = async () => {
@@ -20,7 +23,8 @@ export const TableTicketManager = () => {
             setdata(result)
         }
         fetchItem()
-    }, [])
+    }, []);
+
     function setStatus(status: string) {
         if (status === "dsd") {
             return (
@@ -101,7 +105,7 @@ export const TableTicketManager = () => {
             </div>
             {data.map((item: any, index: any) => (
                 <div className={setcolor(index)} key={item.id}>
-                    <div className="tkm-col1"> <p>{item.STT}</p> </div>
+                    <div className="tkm-col1"> <p>{index + 1}</p> </div>
                     <div className="tkm-col2"><p>{item.BookingCode}</p></div>
                     <div className="tkm-col3"> <p>{item.TicketNumber}</p></div>
                     <div className="tkm-col4"> <p>{item.NameTicket}</p></div>

@@ -1,9 +1,11 @@
-import React from 'react'
+
+import React, { useState } from 'react'
 import { FiCalendar } from 'react-icons/fi'
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 import DatePicker from 'sassy-datepicker'
 
 const AddServicePack = () => {
+
     function ShowFeelsevice(id: string, u: string, d: string) {
         const drop: any = document.getElementById(id)
         const up: any = document.getElementById(u)
@@ -34,11 +36,11 @@ const AddServicePack = () => {
         const checkon: any = document.getElementById(id)
         checkon.checked = true;
     }
-    const [date, setDate] = React.useState(new Date())
+    const [date, setDate] = useState(new Date())
     const handleDateSelect = (newDate: any) => {
         setDate(newDate);
     }
-    const [date2, setDate2] = React.useState(new Date())
+    const [date2, setDate2] = useState(new Date())
     const handleDateSelect2 = (newDate: any) => {
         setDate2(newDate);
     }
@@ -57,8 +59,55 @@ const AddServicePack = () => {
         const ip: any = document.getElementById(iput)
         const chose: any = document.getElementById(id)
         ip.innerText = chose.innerText
+
+
     }
 
+    async function createServicepark(data: object) {
+        var constAPI = 'http://localhost:3000/ServicePackData'
+        var option = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+                //'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: JSON.stringify(data)
+        }
+        fetch(constAPI, option)
+        console.log('post', data)
+    }
+
+    function addServicepack() {
+        var NamePacket: any = document.getElementById('NamePack')
+        var Date: any = document.getElementById('datechange')
+        var Time: any = document.getElementById('Time')
+        var DateEnd: any = document.getElementById('datechange2')
+        var TimeEnd: any = document.getElementById('TimeEnd')
+        var TicketPrice: any = document.getElementById('gvgd')
+        var TicketComboPrice: any = document.getElementById('gvcb')
+        var sove: any = document.getElementById('sove')
+        var Status: any = document.getElementById('inputfeel1')
+        var StatusTicket: boolean = false
+        if (Status.value === "Đang áp dụng") {
+            StatusTicket = true
+        }
+
+        var formdata = {
+            TicketNumber: "ALT20210501",
+            NamePacket: NamePacket.value,
+            TypeTicket: "Vé cổng",
+            TicketStatus: "Đã sử dụng",
+            Date: Date.innerText,
+            Time: Time.value,
+            DateEnd: DateEnd.innerText,
+            TimeEnd: TimeEnd.value,
+            TicketPrice: TicketPrice.value,
+            TicketComboPrice: TicketComboPrice.value + " VND /" + sove.value + " vé",
+            Status: StatusTicket
+        }
+        createServicepark(formdata)
+        return (window.location.href = '/ServicePack')
+    }
     function ShowCalenda(idcalen: string) {
         const calen: any = document.getElementById(idcalen)
         const goiy1: any = document.getElementById('goiy1')
@@ -124,13 +173,14 @@ const AddServicePack = () => {
         <div className="block-screen" id="addsvp"  >
             <div className="popup-sevice-park-div">
                 <p className="add-sevice-park-title">Thêm gói vé</p>
+
                 <div className="sevice-park-row-button">
                     <button className="sevice-park-button-huy" onClick={() => ShowSevicePark('addsvp')}>Hủy</button>
-                    <button className="sevice-park-button-luu" onClick={() => { window.location.href = "/ServicePack"; }}>Lưu</button>
+                    <button className="sevice-park-button-luu" onClick={() => addServicepack()}>Lưu</button>
                 </div>
                 <div className="add-sevice-park-col-item ">
                     <p className="add-sevice-park-conten-item">Tên gói vé</p>
-                    <input className="input-name-sevice-park" type="text" placeholder="Nhập tên gói vé" />
+                    <input className="input-name-sevice-park" id='NamePack' type="text" autoComplete='off' placeholder="Nhập tên gói vé" />
                     <div className="sevice-park-row-conten">
                         <div className="colum-date-time-picker">
                             <p className="add-sevice-park-conten-item">Ngày sử dụng</p>
@@ -140,29 +190,29 @@ const AddServicePack = () => {
                                     <p className='date-time-picker-sevice-park-p' id="goiy1" >dd/mm/yy</p>
                                     <p className='calenda-icon' ><FiCalendar /></p>
                                 </div>
-                                <div className="date-time-picker-sevice-park">
-                                    <div className="date-time-picker-sevice-park">
-                                        <input className="input-time-sevive-park" type="time" id="clock" required />
 
-                                    </div>
+                                <div className="date-time-picker-sevice-park">
+                                    <input className="input-time-sevive-park" type="time" id="Time" />
+
                                 </div>
+
                             </div>
                         </div>
                         <div className="colum-date-time-picker">
                             <p className="add-sevice-park-conten-item">Ngày hết hạn</p>
                             <div className="row-date-time-picker">
-                                <div className="date-time-picker-sevice-park">
-                                    <div className="date-time-picker-sevice-park" onClick={() => ShowCalenda('calen2')}>
-                                        <p style={{ display: 'none' }} className='date-time-picker-sevice-park-p' id="datechange2"> {date2.toLocaleDateString()}</p>
-                                        <p className='date-time-picker-sevice-park-p' id="goiy2" >dd/mm/yy</p>
-                                        <p className='calenda-icon' ><FiCalendar /></p>
-                                    </div>
-                                </div>
-                                <div className="date-time-picker-sevice-park">
-                                    <div className="date-time-picker-sevice-park">
-                                        <input className="input-time-sevive-park" type="time" id="clock" required />
 
-                                    </div>
+                                <div className="date-time-picker-sevice-park" onClick={() => ShowCalenda('calen2')}>
+                                    <p style={{ display: 'none' }} className='date-time-picker-sevice-park-p' id="datechange2"> {date2.toLocaleDateString()}</p>
+                                    <p className='date-time-picker-sevice-park-p' id="goiy2" >dd/mm/yy</p>
+                                    <p className='calenda-icon' ><FiCalendar /></p>
+                                </div>
+
+
+                                <div className="date-time-picker-sevice-park">
+                                    <input className="input-time-sevive-park" type="time" id="TimeEnd" />
+
+
                                 </div>
                             </div>
                         </div>
@@ -195,7 +245,7 @@ const AddServicePack = () => {
                     </div>
                     <p className="add-sevice-park-conten-item">Tình trạng</p>
                     <div className="row-tt-sevice-park" onClick={() => ShowFeelsevice('drdf', 'up', 'down')}>
-                        <p id="inputfeel">Chọn tình trạng</p>
+                        <p id="inputstatus">Chọn tình trạng</p>
                         <label id="down" ><IoIosArrowDown /></label>
                         <label id="up" style={{ display: 'none' }}><IoIosArrowUp /></label>
                     </div>
@@ -204,8 +254,8 @@ const AddServicePack = () => {
                         <p className="ttbc">Là thông tin bắt buộc</p>
                     </div>
                     <div id="drdf" className="dropdownfeel" onClick={() => ShowFeelsevice('drdf', 'up', 'down')}>
-                        <div className="dropdownfeel-item" onClick={() => chose('chosedad', "inputfeel")}><p id="chosedad">Đang áp dụng</p></div>
-                        <div className="dropdownfeel-item" onClick={() => chose('choset', "inputfeel")}><p id="choset">Tắt</p></div>
+                        <div className="dropdownfeel-item" onClick={() => chose('chose-dad', "inputstatus")}><p id="chose-dad">Đang áp dụng</p></div>
+                        <div className="dropdownfeel-item" onClick={() => chose('chose-t', "inputstatus")}><p id="chose-t">Tắt</p></div>
                     </div>
                     <div className='home-calenda-popup' id='calen1' style={{ marginLeft: '0px', marginTop: '160px' }} >
                         <p >{date.toLocaleDateString()}</p>
