@@ -4,7 +4,6 @@ import { Menubar } from "../../components/menubar";
 import Nextpage from "../../components/nextpage";
 import Sreach from "../../components/sreach";
 import Topbar from "../../components/topbar";
-import AcceptUseTicket from "../../components/TicketManager/AcceptUseTicket";
 import ChangeDateUseTicket from "../../components/TicketManager/ChangeDateUseTicket";
 import { FillterTicket } from "../../components/TicketManager/FillterTicket-Manager";
 import TableTicketManager from "./TableTicketManager";
@@ -47,7 +46,6 @@ export const TicketManager = () => {
             </div>
             <ChangeDateUseTicket />
             <FillterTicket />
-            <AcceptUseTicket />
         </div>
     )
 

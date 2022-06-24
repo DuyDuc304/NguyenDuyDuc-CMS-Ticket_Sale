@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react"
+
 import './TableTicketManager.css'
 import { BsThreeDotsVertical } from 'react-icons/bs';
-
+import { useDispatch, useSelector } from "react-redux"
+import { UpdateTicket } from '../../redux/Action';
 
 export const TableTicketManager = () => {
+    const TicketData = useSelector((state: any) => state.TicketData)
+    const dispatch = useDispatch()
     function setcolor(id: number) {
         if (id % 2 === 1) {
             return 'row1'
@@ -11,19 +14,6 @@ export const TableTicketManager = () => {
             return 'row2'
         }
     }
-    const [data, setdata] = useState([])
-    //call api bằng json server
-
-    useEffect(() => {
-        var constAPI = 'http://localhost:3000/Ticket'
-        const fetchItem = async () => {
-            const result = await fetch(constAPI).then(function (response) {
-                return response.json()
-            })
-            setdata(result)
-        }
-        fetchItem()
-    }, []);
 
     function setStatus(status: string) {
         if (status === "dsd") {
@@ -61,7 +51,7 @@ export const TableTicketManager = () => {
                     </div>
                     <div className="row-box-chose " id={id.toString()}>
                         <div className="tkm-chose">
-                            <div className="item-chose" onClick={() => TurnOnUseTicket()} id='sdv'><p>Sử dụng vé</p></div>
+                            <div className="item-chose" onClick={() => TurnOnUseTicket(id.toString())} id='sdv'><p>Sử dụng vé</p></div>
                             <div className="item-chose" onClick={() => Showchangedate()}><p>Đổi ngày sử dụng</p></div>
                         </div>
                         <div className="nhon"></div>
@@ -72,6 +62,17 @@ export const TableTicketManager = () => {
             return ('')
         }
     }
+
+    function TurnOnUseTicket(id: string) {
+        console.log(id)
+        var data = {
+            "StatusUse": "dsd"
+        }
+        dispatch(
+            UpdateTicket(data, id)
+        )
+        return window.location.href = '/TicketManager'
+    }
     function showchose(id: number) {
         const chose: any = document.getElementById(id.toString())
         if (chose.style.display === 'none') {
@@ -80,15 +81,10 @@ export const TableTicketManager = () => {
             chose.style.display = 'none'
         }
     }
-    function TurnOnUseTicket() {
-        const xn: any = document.getElementById('bls-xn')
-        xn.style.display = 'flex'
-    }
+
     function Showchangedate() {
         const bls: any = document.getElementById('bls-dnsdv')
         bls.style.display = 'flex'
-
-
     }
     return (
         <div className="table-ticket-mangager" id="tbtm">
@@ -103,7 +99,7 @@ export const TableTicketManager = () => {
                 <div className="tkm-col8"> <p className="row1-p">Cổng check-in</p></div>
                 <div className="tkm-col9"></div>
             </div>
-            {data.map((item: any, index: any) => (
+            {TicketData.map((item: any, index: any) => (
                 <div className={setcolor(index)} key={item.id}>
                     <div className="tkm-col1"> <p>{index + 1}</p> </div>
                     <div className="tkm-col2"><p>{item.BookingCode}</p></div>

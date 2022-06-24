@@ -1,19 +1,7 @@
-import React, { useEffect, useState } from "react"
+import { useSelector } from "react-redux"
+
 export const TableTicketChange = () => {
-    const [data, setdata] = useState([])
-    //call api bằng json server
-    useEffect(() => {
-        var constAPI = ' http://localhost:3000/Ticket'
-        const fetchItem = async () => {
-            const result = await fetch(constAPI).then(function (response) {
-                return response.json()
-            })
-            setdata(result)
-        }
-        fetchItem()
-    }, [])
-
-
+    const TicketData = useSelector((state: any) => state.TicketData)
     function setcolor(id: number) {
         if (id % 2 === 1) {
             return 'row1-ticket-change'
@@ -56,7 +44,7 @@ export const TableTicketChange = () => {
                 </div>
                 <div className="ticket-change-col7"></div>
             </div>
-            {data.map((item: any, index: any) => (
+            {TicketData.map((item: any, index: any) => (
                 <ul className={setcolor(index)} key={item.id}>
                     <div className="ticket-change-col1">
                         <p >{index + 1}</p>

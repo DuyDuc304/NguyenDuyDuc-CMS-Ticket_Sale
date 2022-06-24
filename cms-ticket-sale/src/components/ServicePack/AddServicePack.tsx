@@ -1,11 +1,14 @@
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { FiCalendar } from 'react-icons/fi'
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 import DatePicker from 'sassy-datepicker'
+import { useDispatch } from 'react-redux'
+import { AddSP } from '../../redux/Action';
 
 const AddServicePack = () => {
 
+    const dispatch = useDispatch()
     function ShowFeelsevice(id: string, u: string, d: string) {
         const drop: any = document.getElementById(id)
         const up: any = document.getElementById(u)
@@ -62,22 +65,8 @@ const AddServicePack = () => {
 
 
     }
+    function handleaddServicepack() {
 
-    async function createServicepark(data: object) {
-        var constAPI = 'http://localhost:3000/ServicePackData'
-        var option = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-                //'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: JSON.stringify(data)
-        }
-        fetch(constAPI, option)
-    }
-
-
-    function addServicepack() {
         var NamePacket: any = document.getElementById('NamePack')
         var Date: any = document.getElementById('datechange')
         var Time: any = document.getElementById('Time')
@@ -87,9 +76,9 @@ const AddServicePack = () => {
         var TicketComboPrice: any = document.getElementById('gvcb')
         var sove: any = document.getElementById('sove')
         var Status: any = document.getElementById('AddStatus')
-        var StatusTicket: boolean = true
-        if (Status.innerText === "Tắt") {
-            StatusTicket = false
+        var StatusTicket: boolean = false
+        if (Status.innerText === "Đang áp dụng") {
+            StatusTicket = true
         }
         var formdata = {
             TicketNumber: "ALT20210501",
@@ -105,9 +94,10 @@ const AddServicePack = () => {
             NumberTicketCombo: sove.value,
             Status: StatusTicket
         }
-
-        createServicepark(formdata)
-        return (window.location.href = '/ServicePack')
+        dispatch(
+            AddSP(formdata)
+        )
+        return (window.location.href = '/Servicepack')
     }
     function ShowCalenda(idcalen: string) {
         const calen: any = document.getElementById(idcalen)
@@ -177,7 +167,7 @@ const AddServicePack = () => {
 
                 <div className="sevice-park-row-button">
                     <button className="sevice-park-button-huy" onClick={() => ShowSevicePark('addsvp')}>Hủy</button>
-                    <button className="sevice-park-button-luu" onClick={() => addServicepack()}>Lưu</button>
+                    <button className="sevice-park-button-luu" onClick={() => handleaddServicepack()}>Lưu</button>
                 </div>
                 <div className="add-sevice-park-col-item ">
                     <p className="add-sevice-park-conten-item">Tên gói vé</p>
@@ -301,3 +291,4 @@ const AddServicePack = () => {
 }
 
 export default AddServicePack
+

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { FiCalendar } from 'react-icons/fi'
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 import DatePicker from 'sassy-datepicker'
@@ -18,20 +18,6 @@ const UpdateServicePack = () => {
             up.style.display = 'none'
         }
     }
-    const [data, setdata] = useState([])
-    //call api bằng json server
-    useEffect(() => {
-        var constAPI = 'http://localhost:3000/ServicePackData'
-        const fetchItem = async () => {
-            const result = await fetch(constAPI).then(function (response) {
-                return response.json()
-            })
-            setdata(result)
-        }
-        fetchItem()
-
-    }, [])
-    console.log(data)
     const [date3, setDate3] = React.useState(new Date())
     const handleDateSelect3 = (newDate: any) => {
         setDate3(newDate);
@@ -40,7 +26,6 @@ const UpdateServicePack = () => {
     const handleDateSelect4 = (newDate: any) => {
         setDate4(newDate);
     }
-
     function ShowCalenda2(idcalen: string) {
         const calen: any = document.getElementById(idcalen)
         const calen1: any = document.getElementById('calen3')
@@ -129,7 +114,7 @@ const UpdateServicePack = () => {
 
     }
     return (
-        <div className="block-screen" id="updatesvp">
+        <div className="block-screen" id="updatesvp" >
             <div className="popup-sevice-park-div">
                 <p className="update-sevice-park-title">Cập nhật thông tin gói vé</p>
                 <div className="sevice-park-row-button">
@@ -255,6 +240,7 @@ const UpdateServicePack = () => {
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }

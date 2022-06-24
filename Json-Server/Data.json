@@ -34,7 +34,6 @@
   "Ticket": [
     {
       "id": 1,
-      "STT": 1,
       "BookingCode": "ALT20210501",
       "TicketNumber": "123456789304",
       "NameTicket": "Hội chợ triển lảm tiêu dùng 2021",
@@ -48,7 +47,6 @@
     },
     {
       "id": 21,
-      "STT": 2,
       "BookingCode": "ALT20210501",
       "TicketNumber": "123456789304",
       "NameTicket": "Hội chợ triển lảm tiêu dùng 2021",
@@ -62,7 +60,6 @@
     },
     {
       "id": 3,
-      "STT": 3,
       "BookingCode": "ALT20210501",
       "TicketNumber": "123456789304",
       "NameTicket": "Hội chợ triển lảm tiêu dùng 2021",
@@ -76,7 +73,6 @@
     },
     {
       "id": 41,
-      "STT": 4,
       "BookingCode": "ALT20210501",
       "TicketNumber": "123456789304",
       "NameTicket": "Hội chợ triển lảm tiêu dùng 2021",
@@ -90,7 +86,6 @@
     },
     {
       "id": 5,
-      "STT": 5,
       "BookingCode": "ALT20210501",
       "TicketNumber": "123456789304",
       "NameTicket": "Hội chợ triển lảm tiêu dùng 2021",
@@ -104,7 +99,6 @@
     },
     {
       "id": 6,
-      "STT": 6,
       "BookingCode": "ALT20210501",
       "TicketNumber": "123456789304",
       "NameTicket": "Hội chợ triển lảm tiêu dùng 2021",
@@ -118,7 +112,6 @@
     },
     {
       "id": 7,
-      "STT": 7,
       "BookingCode": "ALT20210501",
       "TicketNumber": "123456789304",
       "NameTicket": "Hội chợ triển lảm tiêu dùng 2021",
@@ -132,7 +125,6 @@
     },
     {
       "id": 8,
-      "STT": 8,
       "BookingCode": "ALT20210501",
       "TicketNumber": "123456789304",
       "NameTicket": "Hội chợ triển lảm tiêu dùng 2021",
@@ -146,7 +138,6 @@
     },
     {
       "id": 9,
-      "STT": 9,
       "BookingCode": "ALT20210501",
       "TicketNumber": "123456789304",
       "NameTicket": "Hội chợ triển lảm tiêu dùng 2021",
@@ -160,7 +151,6 @@
     },
     {
       "id": 10,
-      "STT": 10,
       "BookingCode": "ALT20210501",
       "TicketNumber": "123456789304",
       "NameTicket": "Hội chợ triển lảm tiêu dùng 2021",
@@ -174,7 +164,6 @@
     },
     {
       "id": 11,
-      "STT": 11,
       "BookingCode": "ALT20210501",
       "TicketNumber": "123456789304",
       "NameTicket": "Hội chợ triển lảm tiêu dùng 2021",
@@ -188,7 +177,6 @@
     },
     {
       "id": 12,
-      "STT": 12,
       "BookingCode": "ALT20210501",
       "TicketNumber": "123456789304",
       "NameTicket": "Hội chợ triển lảm tiêu dùng 2021",

@@ -1,22 +1,10 @@
-import React, { useEffect, useState } from "react"
+
 import './TableSevicePack.css'
 import { HiOutlinePencilAlt } from 'react-icons/hi'
+import { useSelector } from "react-redux"
 
 export const TableSevicePack = () => {
-    const [data, setdata] = useState([])
-    //call api bằng json server
-    useEffect(() => {
-        var constAPI = '  http://localhost:3000/ServicePackData'
-        const fetchItem = async () => {
-            const result = await fetch(constAPI).then(function (response) {
-                return response.json()
-            })
-            setdata(result)
-        }
-        fetchItem()
-
-    }, [])
-
+    const SevicePack = useSelector((state: any) => state.ServicePackData)
     function ShowSevicePark(id: string) {
         const add: any = document.getElementById(id)
         if (add.style.display === 'none') {
@@ -26,7 +14,6 @@ export const TableSevicePack = () => {
         }
 
     }
-
     function status(status: boolean) {
         if (status) {
             return (
@@ -80,7 +67,7 @@ export const TableSevicePack = () => {
                 <div className="table-sivice-park-col8"><p className="row1-p">Tình trạng</p></div>
                 <div className="table-sivice-park-col9"></div>
             </div>
-            {data.map((item: any, index: any) => (
+            {SevicePack.map((item: any, index: any) => (
                 <ul className={setcolor(index)} key={item.id}>
                     < div className="table-sivice-park-col1" > <p>{index + 1}</p></div>
                     <div className="table-sivice-park-col2"><p>{item.TicketNumber}</p></div>
