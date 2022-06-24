@@ -48,7 +48,7 @@ function createServicepark(data: any) {
 }
 
 //cập nhập trạng thái đã sử dụng vé 
-function UpdataTicket(data: object, id: string) {
+function UpdateTicket(data: object, id: string) {
     var option = {
         method: 'PATCH',
         headers: {
@@ -56,30 +56,47 @@ function UpdataTicket(data: object, id: string) {
         },
         body: JSON.stringify(data)
     }
+    console.log(data)
     fetch(APITicket + '/' + id, option)
 }
 
 //innit value
 const innitState = {
+    choseTickket: '',
     ServicePackData,
     TicketData
 }
 console.log(innitState)
-
 
 const rootReducer = (state: any = innitState, action: any) => {
     switch (action.type) {
         //thêm gói dịch vụ
         case "ServicePackData/AddServicePack": {
             createServicepark(action.payload)
-            return state
+            return {
+                ...state,
+                ServicePackData: [
+                    ...state.ServicePackData,
+                    action.payload
+                ]
+            }
         }
         //Sửa trạng thái sử dụng vé thành đã sử dụng
-        case "TicketData/UpdateTicketData": {
-            UpdataTicket(action.payload, action.id)
-            return state;
+        case "TicketData/UpdateTicketStatus": {
+            UpdateTicket(action.payload, action.id)
+            return state
         }
-
+        //Sửa ngày sử dụng vé thành ngày đã chọn
+        case "TicketData/UpdateTicketDate": {
+            UpdateTicket(action.payload, action.id)
+            return state
+        }
+        case "choseTickket/ClickidTicket": {
+            return {
+                ...state,
+                choseTickket: action.payload
+            }
+        }
         default:
             return state;
     }

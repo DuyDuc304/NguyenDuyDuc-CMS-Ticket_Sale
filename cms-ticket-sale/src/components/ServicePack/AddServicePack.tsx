@@ -48,7 +48,6 @@ const AddServicePack = () => {
         setDate2(newDate);
     }
     function ShowSevicePark(id: string) {
-
         const add: any = document.getElementById(id)
         if (add.style.display === 'none') {
             add.style.display = 'flex'
@@ -66,7 +65,6 @@ const AddServicePack = () => {
 
     }
     function handleaddServicepack() {
-
         var NamePacket: any = document.getElementById('NamePack')
         var Date: any = document.getElementById('datechange')
         var Time: any = document.getElementById('Time')
@@ -97,7 +95,7 @@ const AddServicePack = () => {
         dispatch(
             AddSP(formdata)
         )
-        return (window.location.href = '/Servicepack')
+        ShowSevicePark('addsvp')
     }
     function ShowCalenda(idcalen: string) {
         const calen: any = document.getElementById(idcalen)

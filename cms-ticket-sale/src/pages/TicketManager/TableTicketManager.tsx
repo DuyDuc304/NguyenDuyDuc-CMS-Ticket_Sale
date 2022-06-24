@@ -2,7 +2,7 @@
 import './TableTicketManager.css'
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import { useDispatch, useSelector } from "react-redux"
-import { UpdateTicket } from '../../redux/Action';
+import { ClickidTicket, UpdateTicketStatus } from '../../redux/Action';
 
 export const TableTicketManager = () => {
     const TicketData = useSelector((state: any) => state.TicketData)
@@ -52,7 +52,7 @@ export const TableTicketManager = () => {
                     <div className="row-box-chose " id={id.toString()}>
                         <div className="tkm-chose">
                             <div className="item-chose" onClick={() => TurnOnUseTicket(id.toString())} id='sdv'><p>Sử dụng vé</p></div>
-                            <div className="item-chose" onClick={() => Showchangedate()}><p>Đổi ngày sử dụng</p></div>
+                            <div className="item-chose" onClick={() => Showchangedate(id.toString())}><p>Đổi ngày sử dụng</p></div>
                         </div>
                         <div className="nhon"></div>
                     </div>
@@ -69,7 +69,7 @@ export const TableTicketManager = () => {
             "StatusUse": "dsd"
         }
         dispatch(
-            UpdateTicket(data, id)
+            UpdateTicketStatus(data, id)
         )
         return window.location.href = '/TicketManager'
     }
@@ -82,9 +82,13 @@ export const TableTicketManager = () => {
         }
     }
 
-    function Showchangedate() {
+    function Showchangedate(id: string) {
         const bls: any = document.getElementById('bls-dnsdv')
         bls.style.display = 'flex'
+        dispatch(
+            ClickidTicket(id)
+        )
+
     }
     return (
         <div className="table-ticket-mangager" id="tbtm">
@@ -120,6 +124,5 @@ export const TableTicketManager = () => {
         </div>
     )
 }
-
 
 export default TableTicketManager
