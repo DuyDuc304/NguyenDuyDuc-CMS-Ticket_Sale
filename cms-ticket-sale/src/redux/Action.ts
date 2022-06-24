@@ -16,5 +16,4 @@ export const UpdateTicket = (data: any, id: string) => {
         payload: data,
         id: id
     }
-
 }

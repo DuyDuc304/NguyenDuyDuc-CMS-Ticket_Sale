@@ -1,12 +1,15 @@
 
 import './TableSevicePack.css'
 import { HiOutlinePencilAlt } from 'react-icons/hi'
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 
 export const TableSevicePack = () => {
+
     const SevicePack = useSelector((state: any) => state.ServicePackData)
-    function ShowSevicePark(id: string) {
-        const add: any = document.getElementById(id)
+
+    function ShowUpdateSevicePark(idelm: string) {
+
+        const add: any = document.getElementById(idelm)
         if (add.style.display === 'none') {
             add.style.display = 'flex'
         } else {
@@ -94,7 +97,7 @@ export const TableSevicePack = () => {
                         {status(item.Status)}
                     </div>
                     <div className="table-sivice-park-col9">
-                        <div className="row-update" onClick={() => ShowSevicePark('updatesvp')}>
+                        <div className="row-update" onClick={() => ShowUpdateSevicePark('updatesvp')}>
                             <p className="icon-update" ><HiOutlinePencilAlt /></p>
                             <p >Cập nhật</p>
                         </div>

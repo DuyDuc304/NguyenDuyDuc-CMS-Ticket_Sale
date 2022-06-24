@@ -17,8 +17,6 @@ const fetchItemServicePackData = async () => {
     ServicePackData = data.map((item: any) => (
         ServicePackData.push(item)
     ))
-    console.log('fetchItemServicePackData')
-
 }
 fetchItemServicePackData()
 
@@ -81,6 +79,7 @@ const rootReducer = (state: any = innitState, action: any) => {
             UpdataTicket(action.payload, action.id)
             return state;
         }
+
         default:
             return state;
     }

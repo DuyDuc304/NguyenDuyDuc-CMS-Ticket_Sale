@@ -1,9 +1,12 @@
+
 import React from 'react'
 import { FiCalendar } from 'react-icons/fi'
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
+import { useSelector } from 'react-redux'
 import DatePicker from 'sassy-datepicker'
 
 const UpdateServicePack = () => {
+
     function ShowFeelsevice(id: string, u: string, d: string) {
         const drop: any = document.getElementById(id)
         const up: any = document.getElementById(u)
@@ -60,7 +63,6 @@ const UpdateServicePack = () => {
         const chose: any = document.getElementById(id)
         ip.innerText = chose.innerText
     }
-
     function CheckGiaVe1(id: string) {
         const inputgd: any = document.getElementById('gvgd1')
         const inputcb: any = document.getElementById('gvcb1')
@@ -101,7 +103,6 @@ const UpdateServicePack = () => {
         const checkon: any = document.getElementById(id)
         checkon.checked = true;
     }
-
     function ShowSevicePark(id: string) {
 
         const add: any = document.getElementById(id)
