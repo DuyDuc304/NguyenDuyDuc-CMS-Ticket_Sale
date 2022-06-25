@@ -9,6 +9,7 @@ var TicketData: any = []
 var APIServicePackData = '  http://localhost:3000/ServicePackData'
 var APITicket = 'http://localhost:3000/Ticket'
 
+//
 //load data từ server gán = ServicePackData
 const fetchItemServicePackData = async () => {
     const data: any = await fetch(APIServicePackData).then(function (response) {
@@ -21,7 +22,7 @@ const fetchItemServicePackData = async () => {
 fetchItemServicePackData()
 
 
-
+//
 //load data từ server gán = TicketData
 const fetchItemTicketData = async () => {
     const data = await fetch(APITicket).then(function (response) {
@@ -34,7 +35,7 @@ const fetchItemTicketData = async () => {
 }
 fetchItemTicketData()
 
-
+//
 //Tạo gói dịch vụi mới 
 function createServicepark(data: any) {
     var option = {
@@ -47,6 +48,7 @@ function createServicepark(data: any) {
     fetch(APIServicePackData, option)
 }
 
+//
 //cập nhập trạng thái đã sử dụng vé 
 function UpdateTicket(data: object, id: string) {
     var option = {
@@ -60,8 +62,10 @@ function UpdateTicket(data: object, id: string) {
     fetch(APITicket + '/' + id, option)
 }
 
-//innit value
+//
+//innitvalue
 const innitState = {
+    choseServicepack: 1,
     choseTickket: '',
     ServicePackData,
     TicketData
@@ -84,17 +88,26 @@ const rootReducer = (state: any = innitState, action: any) => {
         //Sửa trạng thái sử dụng vé thành đã sử dụng
         case "TicketData/UpdateTicketStatus": {
             UpdateTicket(action.payload, action.id)
-            return state
+            return { ...state }
+
         }
         //Sửa ngày sử dụng vé thành ngày đã chọn
         case "TicketData/UpdateTicketDate": {
             UpdateTicket(action.payload, action.id)
-            return state
+            return { ...state }
         }
+        //vé đang được chọn để cập nhật
         case "choseTickket/ClickidTicket": {
             return {
                 ...state,
                 choseTickket: action.payload
+            }
+        }
+        //vé đang được chọn để cập nhật
+        case "choseServicepack/ClickidServicepack": {
+            return {
+                ...state,
+                choseServicepack: action.payload
             }
         }
         default:

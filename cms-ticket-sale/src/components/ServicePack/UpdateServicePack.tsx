@@ -1,11 +1,21 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import { FiCalendar } from 'react-icons/fi'
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 import { useSelector } from 'react-redux'
 import DatePicker from 'sassy-datepicker'
 
 const UpdateServicePack = () => {
+
+    var idSP = useSelector((state: any) => (state.choseServicepack))
+    var SP = useSelector((state: any) => (state.ServicePackData))
+
+    var SPUpdate: any = SP.find((SPU: any) => (
+        SPU.id === idSP
+    ))
+    console.log(SPUpdate.id)
+
+
 
     function ShowFeelsevice(id: string, u: string, d: string) {
         const drop: any = document.getElementById(id)
@@ -21,11 +31,11 @@ const UpdateServicePack = () => {
             up.style.display = 'none'
         }
     }
-    const [date3, setDate3] = React.useState(new Date())
+    const [date3, setDate3] = useState(new Date())
     const handleDateSelect3 = (newDate: any) => {
         setDate3(newDate);
     }
-    const [date4, setDate4] = React.useState(new Date())
+    const [date4, setDate4] = useState(new Date())
     const handleDateSelect4 = (newDate: any) => {
         setDate4(newDate);
     }
